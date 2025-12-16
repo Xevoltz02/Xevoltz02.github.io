@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raghav Kumar Agarwal | Robotics Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        slate: { 850: '#1e293b', 900: '#0f172a' },
+                        tech: { blue: '#2563eb', dark: '#172554' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .grid-bg {
+            background-image: linear-gradient(to right, #e2e8f0 1px, transparent 1px),
+            linear-gradient(to bottom, #e2e8f0 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans selection:bg-blue-200">
+
+    <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-sm border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center">
+            <div class="font-mono font-bold text-xl tracking-tighter text-slate-900">
+                RKA<span class="text-blue-600">.ROBOTICS</span>
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-600">
+                <a href="#about" class="hover:text-blue-600 transition-colors">ABOUT</a>
+                <a href="#experience" class="hover:text-blue-600 transition-colors">EXPERIENCE</a>
+                <a href="#projects" class="hover:text-blue-600 transition-colors">PROJECTS</a>
+                <a href="#contact" class="hover:text-blue-600 transition-colors">CONTACT</a>
+            </div>
+            <a href="public/assets/resume.pdf" target="_blank" class="px-4 py-2 bg-slate-900 text-white text-xs font-bold uppercase tracking-widest rounded hover:bg-blue-600 transition-colors">
+                Download Resume
+            </a>
+        </div>
+    </nav>
+
+    <section id="about" class="pt-32 pb-20 px-6 relative overflow-hidden">
+        <div class="absolute inset-0 grid-bg -z-10 opacity-60"></div>
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="inline-block px-3 py-1 bg-blue-100 text-blue-700 font-mono text-xs font-bold rounded mb-6">
+                    M.S. ROBOTICS @ NORTHEASTERN
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
+                    Raghav Kumar <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Agarwal</span>
+                </h1>
+                <p class="text-lg text-slate-600 mb-8 max-w-lg leading-relaxed">
+                    Robotics Engineer specializing in Mechanical Engineering, Control Systems, and SLAM. Experienced in developing autonomous systems, sensor fusion, and industrial R&D.
+                </p>
+                
+                <div class="grid grid-cols-2 gap-4 mb-8">
+                    <div class="p-4 bg-white border border-slate-200 rounded-lg shadow-sm">
+                        <i data-lucide="cpu" class="text-blue-600 mb-2 w-5 h-5"></i>
+                        <h3 class="font-bold text-sm">Robotics Systems</h3>
+                        <p class="text-xs text-slate-500 mt-1">ROS2, Navigation, Control</p>
+                    </div>
+                    <div class="p-4 bg-white border border-slate-200 rounded-lg shadow-sm">
+                        <i data-lucide="settings" class="text-blue-600 mb-2 w-5 h-5"></i>
+                        <h3 class="font-bold text-sm">Mechanical Design</h3>
+                        <p class="text-xs text-slate-500 mt-1">SolidWorks, Fusion 360</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <a href="https://github.com" target="_blank" class="p-2 text-slate-500 hover:text-slate-900 transition-colors"><i data-lucide="github"></i></a>
+                    <a href="https://linkedin.com" target="_blank" class="p-2 text-slate-500 hover:text-blue-700 transition-colors"><i data-lucide="linkedin"></i></a>
+                    <a href="mailto:agarwal.rag@northeastern.edu" class="p-2 text-slate-500 hover:text-red-600 transition-colors"><i data-lucide="mail"></i></a>
+                </div>
+            </div>
+            
+            <div class="relative">
+                <div class="relative w-full aspect-square bg-slate-200 rounded-2xl overflow-hidden border-4 border-white shadow-2xl">
+                    <img src="public/assets/profile.jpg" alt="Raghav Agarwal" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md p-4 border-t border-slate-200">
+                        <div class="flex justify-between items-center font-mono text-xs">
+                            <span class="text-slate-500">LOCATION</span>
+                            <span class="font-bold text-slate-900">BOSTON, MA</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute -z-10 top-10 -right-10 w-full h-full border-2 border-slate-200 rounded-2xl"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-10 bg-slate-900 text-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h3 class="text-xs font-mono text-slate-400 mb-6 tracking-widest uppercase">Technical Arsenal</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 opacity-80" id="skills-list">
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-slate-900 mb-12 flex items-center gap-3">
+                <i data-lucide="briefcase" class="text-blue-600"></i> Professional Experience
+            </h2>
+            <div class="relative border-l-2 border-slate-200 pl-8 space-y-12" id="experience-container">
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-2">Featured Projects</h2>
+                    <p class="text-slate-500">Engineering solutions from concept to deployment.</p>
+                </div>
+                <div class="hidden md:block">
+                    <span class="text-xs font-mono bg-slate-200 px-2 py-1 rounded text-slate-600">Git Activity: Active</span>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8" id="projects-container">
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-white border-t border-slate-200 text-center">
+        <p class="font-mono text-xs text-slate-500 tracking-widest">RAGHAV KUMAR AGARWAL © 2025</p>
+    </footer>
+
+    <script>
+        const DATA = {
+            skills: [
+                { cat: "LANGUAGES", items: "Python, C++, MATLAB, Verilog" },
+                { cat: "ROBOTICS", items: "ROS 2, SLAM, OpenCV, PID Control, Kalman Filters" },
+                { cat: "HARDWARE", items: "Raspberry Pi, Arduino, Pixhawk, GPS/IMU, CNC" },
+                { cat: "SOFTWARE", items: "SolidWorks, Fusion 360, Linux, Docker, Git" }
+            ],
+            experience: [
+                {
+                    company: "TATA Power Solar Systems",
+                    role: "Research & Development Intern",
+                    period: "Jan 2024 - July 2024",
+                    location: "India",
+                    desc: "Enhanced 4G data acquisition for solar farms and improved enclosure thermal design by 25%. Led quality control for ISO standards compliance."
+                },
+                {
+                    company: "OLA Electric Technologies",
+                    role: "Project Intern",
+                    period: "June 2022 - July 2022",
+                    location: "India",
+                    desc: "Optimized General Assembly line for Ola S1 Pro EVs. Improved production quality by 15% through sub-assembly restructuring."
+                },
+                {
+                    company: "ASME Projects Team (VIT)",
+                    role: "Mechatronics Head",
+                    period: "Aug 2021 - July 2023",
+                    location: "India",
+                    desc: "Spearheaded development of autonomous payload drones (400g capacity). Manufactured custom remote-controlled propulsion systems."
+                }
+            ],
+            projects: [
+                {
+                    title: "GPS & IMU Sensor Fusion",
+                    tags: ["ROS 2", "Python", "Sensor Fusion", "Boston Dynamics Spot"],
+                    desc: "Built custom ROS 2 drivers for real-time data acquisition. Implemented Extended Kalman Filter (EKF) for dead reckoning and trajectory estimation in GPS-denied environments.",
+                    img: "public/assets/spot.jpg"
+                },
+                {
+                    title: "Autonomous Solar Cleaning Bot",
+                    tags: ["OpenCV", "Robotics", "3D Design"],
+                    desc: "Designed a robot for dry/wet cleaning of solar panels, enhancing energy yield by 20%. Developed cleaning algorithms and mobility components.",
+                    img: "public/assets/solar.jpg"
+                },
+                {
+                    title: "Piezoelectric Load-Decoupler",
+                    tags: ["Mechatronics", "Control Systems", "Award Winner"],
+                    desc: "Engineered a device for autonomous coupling disengagement under high axial loads (50,000N). Won Meritorious Award at Honeywell IANC.",
+                    img: "public/assets/piezo.jpg"
+                },
+                {
+                    title: "Autonomous Drone Navigation",
+                    tags: ["Pixhawk", "Path Planning", "UAV"],
+                    desc: "Designed a quad-copter with Pixhawk flight control for unmapped area navigation. Implemented real-time communication with central control hubs.",
+                    img: "public/assets/drone.jpg"
+                }
+            ]
+        };
+
+        function render() {
+            // Skills
+            const skillsContainer = document.getElementById('skills-list');
+            DATA.skills.forEach(s => {
+                skillsContainer.innerHTML += `
+                <div>
+                    <h4 class="text-blue-400 font-bold text-sm mb-2">${s.cat}</h4>
+                    <p class="text-sm font-mono leading-relaxed">${s.items}</p>
+                </div>`;
+            });
+
+            // Experience
+            const expContainer = document.getElementById('experience-container');
+            DATA.experience.forEach(e => {
+                expContainer.innerHTML += `
+                <div class="relative">
+                    <span class="absolute -left-[41px] top-1 h-5 w-5 rounded-full border-4 border-white bg-blue-600"></span>
+                    <div class="mb-1 flex items-center gap-3">
+                        <h3 class="font-bold text-lg text-slate-900">${e.role}</h3>
+                        <span class="text-xs font-mono py-0.5 px-2 bg-slate-100 rounded text-slate-600">${e.period}</span>
+                    </div>
+                    <div class="text-sm font-semibold text-slate-600 mb-3">${e.company} | ${e.location}</div>
+                    <p class="text-slate-600 leading-relaxed max-w-2xl">${e.desc}</p>
+                </div>`;
+            });
+
+            // Projects
+            const projContainer = document.getElementById('projects-container');
+            DATA.projects.forEach(p => {
+                projContainer.innerHTML += `
+                <div class="group bg-white rounded-xl border border-slate-200 overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-48 bg-slate-200 relative overflow-hidden">
+                        <img src="${p.img}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            ${p.tags.map(t => `<span class="text-[10px] font-bold uppercase tracking-wider text-blue-700 bg-blue-50 px-2 py-1 rounded">${t}</span>`).join('')}
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">${p.title}</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">${p.desc}</p>
+                        <a href="#" class="inline-flex items-center text-sm font-bold text-slate-900 hover:text-blue-600 transition-colors">
+                            View Project <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                        </a>
+                    </div>
+                </div>`;
+            });
+
+            lucide.createIcons();
+        }
+
+        window.addEventListener('DOMContentLoaded', render);
+    </script>
+</body>
+</html>
