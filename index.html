@@ -34,11 +34,11 @@
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 2px; }
         .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #1d4ed8; }
 
-        /* --- NEW CARD STYLES --- */
+        /* --- SKILL CARD STYLES --- */
         .skill-card {
             background: white;
             border: 1px solid #e2e8f0;
-            border-radius: 0.75rem; /* Tailwind rounded-xl */
+            border-radius: 0.75rem; 
             padding: 1.25rem;
             position: relative;
             overflow: hidden;
@@ -67,8 +67,8 @@
 
         .tool-tag {
             display: inline-block;
-            background: #eff6ff; /* blue-50 */
-            color: #2563eb; /* blue-600 */
+            background: #eff6ff; 
+            color: #2563eb; 
             font-size: 0.7rem;
             font-family: 'JetBrains Mono', monospace;
             padding: 2px 6px;
@@ -113,9 +113,8 @@
                     Bridging Robotics, Design, and Intelligent Automation.
                     <br><br>
                     The challenge of designing autonomous systems that can navigate, interact, and make decisions in real time drives me to dive deeper into intricacies. Whether it's localization, intelligent drones, or optimizing robotic workflows, my goal is to create efficient, scalable solutions.
-                    <hr>
+                    <hr class="border-slate-300 my-4">
                     Robotics is more than just engineering for me, it’s a means to innovate, problem-solve, and create intelligent systems that drive efficiency and automation. I thrive at the intersection of automation, mechanical design, and real-world applications, ensuring that my work bridges the gap between research and industrial impact.
-                <hr>
                 </p>
                 
                 <div class="grid grid-cols-2 gap-4 mb-8">
@@ -261,6 +260,7 @@
                     id: 101, category: "experience", company: "TATA Power Solar Systems Pvt. Ltd.",
                     role: "Research & Development Intern",
                     period: "Jan 2024 - July 2024", location: "India",
+                    logo: "public/assets/tata.jpg",
                     desc: "Enhanced 4G data acquisition system for solar farms and microgrid regions, ensuring optimized data collection and consistency.",
                     details: [
                         "Deployed and enhanced the 4G data acquisition system for solar panels in solar farms and microgrid commercial regions, ensuring optimized data collection, accuracy, and consistency, resulting in improved functionality OTA.",
@@ -273,6 +273,7 @@
                     id: 102, category: "experience", company: "OLA Electric Technologies Pvt. Ltd.",
                     role: "Project Intern",
                     period: "June 2022 - July 2022", location: "India",
+                    logo: "public/assets/ola.jpg",
                     desc: "Optimized General Assembly line for the EV electric scooter (Ola S1 Pro) and improved production quality by 15%.",
                     details: [
                         "Analyzed and optimized the General Assembly line for the EV electric scooter (Ola S1 Pro).",
@@ -285,6 +286,7 @@
                     id: 103, category: "experience", company: "ASME Projects Team, VIT India",
                     role: "Mechatronics Head",
                     period: "Aug 2021 - July 2023", location: "India",
+                    // No logo provided, will default to building icon
                     desc: "Spearheaded autonomous drone development for payload delivery (up to 400g) and manufactured custom electronic propulsion systems.",
                     details: [
                         "Spearheaded the development of autonomous drones for payload delivery of up to 400g with an average battery life of 25 minutes.",
@@ -453,10 +455,26 @@
                     ${detail}
                 </li>`).join('');
 
-            const imageHTML = isExp 
-                ? `<div class="text-center font-mono text-slate-500 text-sm">Company Logo Placeholder</div>`
-                : `<img src="${item.image}" class="w-full h-full object-cover rounded-lg border border-slate-200" alt="${item.title}">`;
+            // LOGO LOGIC
+            // If it's experience AND has a logo -> Show Logo
+            // If it's experience AND NO logo -> Show Building Icon Fallback
+            // If it's project -> Show Project Image
+            let imageHTML = '';
 
+            if (isExp) {
+                if (item.logo) {
+                    imageHTML = `<div class="w-full h-full flex items-center justify-center bg-white rounded-lg border border-slate-200 p-8">
+                                    <img src="${item.logo}" alt="${item.company}" class="max-w-full max-h-full object-contain">
+                                 </div>`;
+                } else {
+                    imageHTML = `<div class="w-full h-full flex flex-col items-center justify-center bg-slate-50 rounded-lg border-2 border-dashed border-slate-200 text-slate-400">
+                                    <i data-lucide="building-2" class="w-12 h-12 mb-2 opacity-50"></i>
+                                    <span class="text-[10px] font-mono uppercase tracking-widest">Workplace</span>
+                                 </div>`;
+                }
+            } else {
+                imageHTML = `<img src="${item.image}" class="w-full h-full object-cover rounded-lg border border-slate-200" alt="${item.title}">`;
+            }
 
             body.innerHTML = `
                 <div class="grid md:grid-cols-3 gap-8 mb-6">
@@ -502,4 +520,3 @@
     </script>
 </body>
 </html>
-
