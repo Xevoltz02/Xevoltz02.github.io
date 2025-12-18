@@ -165,7 +165,8 @@
                     </div>
 
                 </div>
-                <div class="flex gap-4" id="contact">
+                
+                <div class="flex gap-4">
                     <a href="https://github.com/your-github-username" target="_blank" class="p-2 text-slate-500 hover:text-slate-900 transition-colors"><i data-lucide="github"></i></a>
                     <a href="https://linkedin.com/in/your-linkedin-profile" target="_blank" class="p-2 text-slate-500 hover:text-blue-700 transition-colors"><i data-lucide="linkedin"></i></a>
                     <a href="mailto:agarwal.rag@northeastern.edu" class="p-2 text-slate-500 hover:text-red-600 transition-colors"><i data-lucide="mail"></i></a>
@@ -242,6 +243,76 @@
         </div>
     </section>
 
+    <section id="contact" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#60a5fa 1px, transparent 1px); background-size: 32px 32px;"></div>
+        <div class="max-w-6xl mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-16">
+            
+            <div class="space-y-8">
+                <div>
+                    <h2 class="text-3xl font-bold mb-4">Let's Build Something Great.</h2>
+                    <p class="text-slate-400 text-lg leading-relaxed">
+                        I'm always open to discussions on robotics R&D, AI in automation, and industry collaborations.
+                    </p>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center text-blue-500">
+                            <i data-lucide="mail"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-500 font-mono uppercase tracking-widest">Email</div>
+                            <div class="font-bold">agarwal.rag@northeastern.edu</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center text-blue-500">
+                            <i data-lucide="phone"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-500 font-mono uppercase tracking-widest">Phone</div>
+                            <div class="font-bold">+1 857-339-9025</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 pt-4">
+                    <a href="https://linkedin.com/in/your-linkedin-profile" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded transition-colors text-sm">
+                        LinkedIn Profile
+                    </a>
+                    <a href="https://github.com/your-github-username" class="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded transition-colors text-sm">
+                        GitHub
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white text-slate-900 p-8 rounded-2xl shadow-2xl">
+                <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                    <i data-lucide="send" class="text-blue-600 w-5 h-5"></i> Send a Message
+                </h3>
+                
+                <form action="https://formspree.io/f/xaqwwprz" method="POST" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Your Name</label>
+                        <input type="text" name="name" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:border-blue-500 transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Your Email</label>
+                        <input type="email" name="email" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:border-blue-500 transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Message</label>
+                        <textarea name="message" rows="4" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-4 bg-slate-900 text-white font-bold uppercase tracking-widest rounded-lg hover:bg-blue-600 transition-colors">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
     <footer class="py-12 bg-white border-t border-slate-200 text-center">
         <p class="font-mono text-xs text-slate-500 tracking-widest">RAGHAV KUMAR AGARWAL © 2025</p>
     </footer>
@@ -274,7 +345,7 @@
             skills: [
                 { cat: "LANGUAGES", items: "PYTHON, C++, C, MATLAB, CUDA, BASH" },
                 { cat: "ROBOTICS & AI", items: "ROS 2, SLAM, OpenCV, PID, Kalman Filters, MoveIt, NAV2" },
-                { cat: "EMBEDDED & HARDWARE", items: "Raspberry Pi (3/4/Zero), Arduino, Pixhawk, ArduPilot, GPS/IMU's, IoT Devices, I2C/SPI/UART" },
+                { cat: "EMBEDDED & HARDWARE", items: "Raspberry Pi (3/4/Zero), Arduino, Pixhawk, ArduPilot, GPS/IMU's, IoT Devices, FPGA, I2C/SPI/UART" },
                 { cat: "INDUSTRIAL & TOOLS", items: "SolidWorks, Autodesk Fusion 360, AutoCAD, MATLAB Simulink, Linux, Git, Docker, CNC Machining, 3D Printing" }
             ],
             experience: [
@@ -583,4 +654,3 @@
     </script>
 </body>
 </html>
-
