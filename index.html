@@ -207,20 +207,20 @@
     </section>
 
     <section id="education" class="py-16 bg-slate-50 border-t border-slate-200">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+        <div class="max-w-6xl mx-auto px-6">
             
-            <div>
+            <div class="mb-16">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
                     <i data-lucide="graduation-cap" class="text-blue-600"></i> Education
                 </h2>
-                <div id="education-list" class="space-y-8"></div>
+                <div id="education-list" class="grid md:grid-cols-2 gap-8"></div>
             </div>
 
             <div>
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
                     <i data-lucide="trophy" class="text-blue-600"></i> Honors & Awards
                 </h2>
-                <div id="awards-list" class="space-y-6"></div>
+                <div id="awards-list" class="grid md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
             </div>
 
         </div>
@@ -413,7 +413,7 @@
                 {
                     title: "Meritorious Award",
                     issuer: "Vellore Institute of Technology",
-                    desc: "Awarded for academic excellence during undergraduate studies."
+                    desc: "Engineered a piezoelectric-based mechatronic device for autonomous disengagement of couplings for large pipes when axial loads exceed a 50000N, effectively preventing mechanical failures"
                 },
                 {
                     title: "Finalist - MANGATA Lunar Rover Challenge",
@@ -571,14 +571,14 @@
             const awardContainer = document.getElementById('awards-list');
             DATA.awards.forEach(aw => {
                 awardContainer.innerHTML += `
-                <div class="flex items-start gap-4 p-4 bg-white rounded-lg border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-                    <div class="p-2 bg-yellow-50 text-yellow-600 rounded-full">
-                        <i data-lucide="award" class="w-5 h-5"></i>
+                <div class="flex items-start gap-3 p-3 bg-white rounded-lg border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="p-1.5 bg-yellow-50 text-yellow-600 rounded-full flex-shrink-0">
+                        <i data-lucide="award" class="w-4 h-4"></i>
                     </div>
                     <div>
-                        <h3 class="font-bold text-slate-900">${aw.title}</h3>
-                        <p class="text-xs text-slate-500 mb-1">${aw.issuer}</p>
-                        ${aw.desc ? `<p class="text-sm text-slate-600 leading-snug">${aw.desc}</p>` : ''}
+                        <h3 class="font-bold text-sm text-slate-900 leading-tight mb-1">${aw.title}</h3>
+                        <p class="text-[10px] text-slate-500 font-mono uppercase tracking-wider mb-2">${aw.issuer}</p>
+                        ${aw.desc ? `<p class="text-xs text-slate-600 leading-snug">${aw.desc}</p>` : ''}
                     </div>
                 </div>`;
             });
