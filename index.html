@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raghav Kumar Agarwal - Physical Portfolio</title>
+    <title>Raghav Kumar Agarwal - Detailed Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -35,7 +35,7 @@
         .page {
             width: 210mm;
             min-height: 297mm;
-            padding: 20mm;
+            padding: 15mm 20mm;
             margin: 0 auto;
             background: white;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -52,269 +52,329 @@
             linear-gradient(to bottom, #f1f5f9 1px, transparent 1px);
             background-size: 20px 20px;
         }
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            color: #2563eb;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 0.5rem;
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-slate-900 font-sans">
 
-    <div class="page flex flex-col justify-between relative">
+    <div class="page flex flex-col relative">
         <div class="absolute inset-0 grid-bg z-0 opacity-50"></div>
         
-        <div class="relative z-10 pt-10">
-            <div class="w-20 h-2 bg-blue-600 mb-8"></div>
-            <h1 class="text-6xl font-extrabold tracking-tight text-slate-900 leading-tight mb-4">
-                RAGHAV<br>KUMAR<br><span class="text-blue-600">AGARWAL</span>
+        <div class="relative z-10 mb-12">
+            <div class="w-16 h-1 bg-blue-600 mb-6"></div>
+            <h1 class="text-5xl font-extrabold tracking-tight text-slate-900 leading-none mb-2">
+                RAGHAV KUMAR <span class="text-blue-600">AGARWAL</span>
             </h1>
-            <p class="text-xl text-slate-500 font-mono tracking-widest uppercase">Robotics Engineer</p>
-        </div>
-
-        <div class="relative z-10 flex-grow flex items-center justify-center">
-            <div class="w-64 h-64 border-4 border-slate-900 rounded-full flex items-center justify-center relative">
-                <div class="absolute inset-0 border-r-2 border-slate-200 rounded-full"></div>
-                <div class="w-48 h-48 bg-blue-50 rounded-full flex items-center justify-center">
-                    <i data-lucide="cpu" class="w-24 h-24 text-blue-600 stroke-[1.5]"></i>
-                </div>
+            <p class="text-lg text-slate-500 font-mono tracking-widest uppercase mb-6">Robotics Engineer | M.S. Northeastern University</p>
+            
+            <div class="flex flex-wrap gap-6 text-xs font-medium text-slate-600 border-y border-slate-200 py-3">
+                <span class="flex items-center gap-2"><i data-lucide="mail" class="w-3 h-3 text-blue-500"></i> agarwal.rag@northeastern.edu</span>
+                <span class="flex items-center gap-2"><i data-lucide="phone" class="w-3 h-3 text-blue-500"></i> +1 (857) 339-9025</span>
+                <span class="flex items-center gap-2"><i data-lucide="linkedin" class="w-3 h-3 text-blue-500"></i> linkedin.com/in/raghavkragarwal</span>
+                <span class="flex items-center gap-2"><i data-lucide="map-pin" class="w-3 h-3 text-blue-500"></i> Boston, MA</span>
             </div>
         </div>
 
-        <div class="relative z-10 border-t-2 border-slate-900 pt-8">
-            <div class="grid grid-cols-2 gap-8 text-sm">
-                <div>
-                    <h3 class="font-bold text-slate-900 mb-1">CONTACT</h3>
-                    <p class="text-slate-600">agarwal.rag@northeastern.edu</p>
-                    <p class="text-slate-600">+1 (857) 339-9025</p>
-                    <p class="text-slate-600">Boston, MA</p>
-                </div>
-                <div class="text-right">
-                    <h3 class="font-bold text-slate-900 mb-1">ONLINE</h3>
-                    <p class="text-slate-600">linkedin.com/in/raghavkragarwal</p>
-                    <p class="text-slate-600">github.com/your-github-username</p>
-                    <p class="text-slate-600">raghav-robotics.com</p>
-                </div>
+        <div class="grid grid-cols-3 gap-10 h-full relative z-10">
+            <div class="col-span-1 space-y-10">
+                
+                <section>
+                    <div class="section-title"><i data-lucide="graduation-cap" class="w-4 h-4"></i> Education</div>
+                    
+                    <div class="mb-6">
+                        <div class="font-bold text-sm">Northeastern University</div>
+                        <div class="text-xs text-blue-600 font-bold mb-1">M.S. Robotics | 2024-Present</div>
+                        <p class="text-[10px] text-slate-500 font-mono mb-2">Relevant Coursework:</p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="px-1.5 py-0.5 bg-slate-100 text-slate-600 text-[9px] rounded">Robotics Sensing</span>
+                            <span class="px-1.5 py-0.5 bg-slate-100 text-slate-600 text-[9px] rounded">Mobile Robotics</span>
+                            <span class="px-1.5 py-0.5 bg-slate-100 text-slate-600 text-[9px] rounded">Control Systems</span>
+                            <span class="px-1.5 py-0.5 bg-slate-100 text-slate-600 text-[9px] rounded">Legged Robots</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="font-bold text-sm">VIT, India</div>
+                        <div class="text-xs text-blue-600 font-bold mb-1">B.Tech Mechanical | 2020-2024</div>
+                        <p class="text-[10px] text-slate-500 font-mono mb-2">Relevant Coursework:</p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="px-1.5 py-0.5 bg-slate-100 text-slate-600 text-[9px] rounded">Mechatronics</span>
+                            <span class="px-1.5 py-0.5 bg-slate-100 text-slate-600 text-[9px] rounded">Auto Electronics</span>
+                            <span class="px-1.5 py-0.5 bg-slate-100 text-slate-600 text-[9px] rounded">FEA</span>
+                            <span class="px-1.5 py-0.5 bg-slate-100 text-slate-600 text-[9px] rounded">Kinematics</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="section-title"><i data-lucide="code" class="w-4 h-4"></i> Technical Arsenal</div>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <div class="text-[10px] font-bold text-slate-900 uppercase tracking-wider mb-1">Languages</div>
+                            <div class="text-[10px] text-slate-600 leading-relaxed">
+                                Python, C++, C, MATLAB, CUDA, Verilog, Bash
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-[10px] font-bold text-slate-900 uppercase tracking-wider mb-1">Robotics & AI</div>
+                            <div class="text-[10px] text-slate-600 leading-relaxed">
+                                ROS 2, SLAM, OpenCV, PID, Kalman Filters, MoveIt, NAV2
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-[10px] font-bold text-slate-900 uppercase tracking-wider mb-1">Hardware</div>
+                            <div class="text-[10px] text-slate-600 leading-relaxed">
+                                Raspberry Pi (3/4/Zero), Arduino, FPGA, Pixhawk, ArduPilot, GPS, IMUs, LiDAR
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-[10px] font-bold text-slate-900 uppercase tracking-wider mb-1">Tools</div>
+                            <div class="text-[10px] text-slate-600 leading-relaxed">
+                                SolidWorks, Fusion 360, Docker, Linux, Git, 3D Printing, CNC
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <div class="col-span-2 space-y-10">
+                
+                <section>
+                    <div class="section-title"><i data-lucide="briefcase" class="w-4 h-4"></i> Professional Experience</div>
+
+                    <div class="relative border-l-2 border-slate-200 pl-6 space-y-8">
+                        
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-blue-600"></div>
+                            <div class="flex justify-between items-baseline mb-1">
+                                <h3 class="font-bold text-sm text-slate-900">Research & Development Intern</h3>
+                                <span class="text-xs font-mono text-slate-500">Jan 2024 - July 2024</span>
+                            </div>
+                            <div class="text-xs text-blue-600 font-bold uppercase tracking-wider mb-2">TATA Power Solar Systems</div>
+                            <ul class="text-[11px] text-slate-700 space-y-1.5 list-disc pl-3 leading-relaxed">
+                                <li>Deployed and enhanced 4G data acquisition systems for solar farms and microgrid regions, ensuring 99.9% uptime in data collection.</li>
+                                <li>Conducted thermal simulations on enclosure designs, resulting in a modified structure that boosted heat dissipation by 25% and increased system stability.</li>
+                                <li>Led inspections and quality control procedures, ensuring strict product compliance with industry standards like IEC 60950, IEC 61010, and ISO 9001.</li>
+                            </ul>
+                        </div>
+
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-slate-300"></div>
+                            <div class="flex justify-between items-baseline mb-1">
+                                <h3 class="font-bold text-sm text-slate-900">Project Intern</h3>
+                                <span class="text-xs font-mono text-slate-500">June 2022 - July 2022</span>
+                            </div>
+                            <div class="text-xs text-blue-600 font-bold uppercase tracking-wider mb-2">OLA Electric Technologies</div>
+                            <ul class="text-[11px] text-slate-700 space-y-1.5 list-disc pl-3 leading-relaxed">
+                                <li>Analyzed and optimized the General Assembly line for the Ola S1 Pro electric scooter.</li>
+                                <li>Restructured sub-assembly workflows to minimize idle time, directly improving overall production quality by 15%.</li>
+                                <li>Collaborated with cross-functional teams to implement lean manufacturing principles on the assembly floor.</li>
+                            </ul>
+                        </div>
+
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-slate-300"></div>
+                            <div class="flex justify-between items-baseline mb-1">
+                                <h3 class="font-bold text-sm text-slate-900">Mechatronics Head</h3>
+                                <span class="text-xs font-mono text-slate-500">Aug 2021 - July 2023</span>
+                            </div>
+                            <div class="text-xs text-blue-600 font-bold uppercase tracking-wider mb-2">ASME Projects Team</div>
+                            <ul class="text-[11px] text-slate-700 space-y-1.5 list-disc pl-3 leading-relaxed">
+                                <li>Spearheaded the R&D of autonomous drones capable of delivering 400g payloads with a 25-minute battery life.</li>
+                                <li>Manufactured custom electronic propulsion systems for various UAV configurations (fixed, oblique, dihedral).</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section>
+                    <div class="section-title"><i data-lucide="trophy" class="w-4 h-4"></i> Key Achievements</div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-slate-50 p-3 rounded border border-slate-100">
+                            <div class="font-bold text-xs text-slate-900">Meritorious Award</div>
+                            <div class="text-[10px] text-blue-600 mb-1">Honeywell IANC & VIT</div>
+                            <p class="text-[9px] text-slate-600 leading-tight">Awarded for the "Piezoelectric Load-Decoupler," recognized for innovation in mechanical safety systems.</p>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded border border-slate-100">
+                            <div class="font-bold text-xs text-slate-900">3rd Place - AEROMANIA</div>
+                            <div class="text-[10px] text-blue-600 mb-1">ASME E-fest</div>
+                            <p class="text-[9px] text-slate-600 leading-tight">Manufactured and piloted a micro-class plane capable of autonomous payload delivery.</p>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded border border-slate-100">
+                            <div class="font-bold text-xs text-slate-900">Finalist - MANGATA</div>
+                            <div class="text-[10px] text-blue-600 mb-1">SEDS Challenge</div>
+                            <p class="text-[9px] text-slate-600 leading-tight">Designed a mobile Lunar rover for soil testing and cave mapping with wireless data transmission.</p>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded border border-slate-100">
+                            <div class="font-bold text-xs text-slate-900">Finalist - E-Yantra</div>
+                            <div class="text-[10px] text-blue-600 mb-1">IIT Bombay</div>
+                            <p class="text-[9px] text-slate-600 leading-tight">Developed a functional autonomous agricultural weeder robot using ROS and CAD.</p>
+                        </div>
+                    </div>
+                </section>
+
             </div>
         </div>
     </div>
 
     <div class="page">
         <div class="flex justify-between items-end border-b-2 border-slate-100 pb-4 mb-8">
-            <h2 class="text-2xl font-bold text-slate-900">PROFESSIONAL PROFILE</h2>
+            <h2 class="text-lg font-bold text-slate-900 uppercase tracking-widest">Selected Projects</h2>
             <span class="text-xs font-mono text-slate-400">PAGE 02</span>
         </div>
 
-        <div class="grid grid-cols-3 gap-8 h-full">
-            <div class="col-span-1 space-y-8 border-r border-slate-100 pr-6">
-                
-                <section>
-                    <h3 class="text-xs font-bold uppercase tracking-widest text-blue-600 mb-4 flex items-center gap-2">
-                        <i data-lucide="graduation-cap" class="w-4 h-4"></i> Education
-                    </h3>
-                    <div class="space-y-4">
-                        <div>
-                            <div class="font-bold text-sm">Northeastern University</div>
-                            <div class="text-xs text-slate-500 italic mb-1">M.S. Robotics | 2024-Present</div>
-                            <p class="text-[10px] text-slate-600 leading-tight">Robotics Sensing, Mechanics & Control, Mobile Robotics, Legged Robots</p>
-                        </div>
-                        <div>
-                            <div class="font-bold text-sm">VIT, India</div>
-                            <div class="text-xs text-slate-500 italic mb-1">B.Tech Mechanical | 2020-2024</div>
-                            <p class="text-[10px] text-slate-600 leading-tight">Mechatronics, Auto Electronics, Kinematics, FEA</p>
-                        </div>
+        <div class="space-y-8">
+
+            <div class="grid grid-cols-4 gap-6">
+                <div class="col-span-1">
+                    <img src="public/assets/drone.jpg.png" class="w-full h-32 object-cover rounded-lg border border-slate-200 mb-2">
+                    <div class="flex flex-wrap gap-1">
+                        <span class="px-1.5 py-0.5 bg-blue-50 text-blue-700 text-[8px] font-bold rounded border border-blue-100">PYTHON</span>
+                        <span class="px-1.5 py-0.5 bg-blue-50 text-blue-700 text-[8px] font-bold rounded border border-blue-100">SCIPY</span>
+                        <span class="px-1.5 py-0.5 bg-blue-50 text-blue-700 text-[8px] font-bold rounded border border-blue-100">RRT</span>
                     </div>
-                </section>
-
-                <section>
-                    <h3 class="text-xs font-bold uppercase tracking-widest text-blue-600 mb-4 flex items-center gap-2">
-                        <i data-lucide="code" class="w-4 h-4"></i> Skills
-                    </h3>
-                    <div class="space-y-3">
-                        <div>
-                            <div class="text-[10px] font-bold text-slate-900">CODE</div>
-                            <div class="text-[10px] text-slate-600">Python, C++, MATLAB, CUDA, Verilog, ROS 2</div>
-                        </div>
-                        <div>
-                            <div class="text-[10px] font-bold text-slate-900">HARDWARE</div>
-                            <div class="text-[10px] text-slate-600">Raspberry Pi, Arduino, FPGA, Pixhawk, Sensors (LiDAR/IMU)</div>
-                        </div>
-                        <div>
-                            <div class="text-[10px] font-bold text-slate-900">TOOLS</div>
-                            <div class="text-[10px] text-slate-600">SolidWorks, Fusion 360, Docker, Linux, Git</div>
-                        </div>
+                </div>
+                <div class="col-span-3">
+                    <h3 class="font-bold text-sm text-slate-900">Autonomous Drone Racing: Hierarchical Motion Planning</h3>
+                    <p class="text-[10px] text-slate-500 font-mono mb-2">Algorithm Development & Optimization</p>
+                    <p class="text-[11px] text-slate-700 leading-relaxed mb-2">
+                        Raw path planning algorithms like RRT often produce jagged, inefficient trajectories unflyable at high speeds. I developed a hierarchical framework to solve this.
+                    </p>
+                    <div class="bg-slate-50 p-3 rounded border border-slate-200">
+                        <h4 class="text-[10px] font-bold text-slate-900 uppercase tracking-wide mb-1">Technical Implementation</h4>
+                        <ul class="text-[10px] text-slate-600 list-disc pl-3 space-y-1">
+                            <li>Implemented <strong>3D RRT</strong> to find initial collision-free topology through complex obstacle courses.</li>
+                            <li>Formulated a <strong>Direct Transcription</strong> trajectory optimization problem, solving it using the <strong>SLSQP algorithm</strong> via SciPy.</li>
+                            <li>Enforced physics-based constraints (terminal velocity), boundary conditions, and control jerk minimization.</li>
+                            <li><strong>Result:</strong> Reduced path length by <strong>68.6%</strong> compared to raw RRT, generating smooth, flyable trajectories.</li>
+                        </ul>
                     </div>
-                </section>
-
-                <section>
-                    <h3 class="text-xs font-bold uppercase tracking-widest text-blue-600 mb-4 flex items-center gap-2">
-                        <i data-lucide="award" class="w-4 h-4"></i> Awards
-                    </h3>
-                    <ul class="text-[10px] text-slate-600 space-y-2 list-disc pl-3">
-                        <li><strong>Meritorious Award</strong> (Honeywell IANC) for Piezoelectric Device.</li>
-                        <li><strong>3rd Place AEROMANIA</strong> (ASME) for Micro UAV.</li>
-                        <li><strong>Finalist MANGATA</strong> (SEDS) for Lunar Rover.</li>
-                    </ul>
-                </section>
-
-            </div>
-
-            <div class="col-span-2 space-y-8">
-                <h3 class="text-xs font-bold uppercase tracking-widest text-blue-600 mb-2 flex items-center gap-2">
-                    <i data-lucide="briefcase" class="w-4 h-4"></i> Work Experience
-                </h3>
-
-                <div class="relative border-l-2 border-slate-200 pl-6 space-y-8">
-                    
-                    <div class="relative">
-                        <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-slate-200 border-2 border-white"></div>
-                        <div class="flex justify-between items-baseline mb-1">
-                            <h4 class="font-bold text-slate-900">R&D Intern</h4>
-                            <span class="text-xs font-mono text-slate-500">Jan 2024 - July 2024</span>
-                        </div>
-                        <div class="text-xs text-blue-600 font-bold mb-2">TATA Power Solar Systems</div>
-                        <p class="text-xs text-slate-600 leading-relaxed">
-                            Enhanced 4G data acquisition for solar farms, ensuring optimized collection. Improved enclosure thermal design by 25% via simulation. Led QC procedures for ISO/IEC compliance.
-                        </p>
-                    </div>
-
-                    <div class="relative">
-                        <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-slate-200 border-2 border-white"></div>
-                        <div class="flex justify-between items-baseline mb-1">
-                            <h4 class="font-bold text-slate-900">Project Intern</h4>
-                            <span class="text-xs font-mono text-slate-500">June 2022 - July 2022</span>
-                        </div>
-                        <div class="text-xs text-blue-600 font-bold mb-2">OLA Electric Technologies</div>
-                        <p class="text-xs text-slate-600 leading-relaxed">
-                            Optimized EV scooter assembly lines, improving production quality by 15%. Reduced idle time and restructured sub-assembly workflows.
-                        </p>
-                    </div>
-
-                    <div class="relative">
-                        <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-slate-200 border-2 border-white"></div>
-                        <div class="flex justify-between items-baseline mb-1">
-                            <h4 class="font-bold text-slate-900">Mechatronics Head</h4>
-                            <span class="text-xs font-mono text-slate-500">Aug 2021 - July 2023</span>
-                        </div>
-                        <div class="text-xs text-blue-600 font-bold mb-2">ASME Projects Team</div>
-                        <p class="text-xs text-slate-600 leading-relaxed">
-                            Spearheaded autonomous payload drone development (400g capacity). Manufactured custom electronic propulsion systems for fixed-wing UAVs.
-                        </p>
-                    </div>
-
                 </div>
             </div>
+
+            <hr class="border-slate-100">
+
+            <div class="grid grid-cols-4 gap-6">
+                <div class="col-span-1">
+                    <img src="public/assets/Nuance.jpg" class="w-full h-32 object-cover rounded-lg border border-slate-200 mb-2">
+                    <div class="flex flex-wrap gap-1">
+                        <span class="px-1.5 py-0.5 bg-blue-50 text-blue-700 text-[8px] font-bold rounded border border-blue-100">ROS 2</span>
+                        <span class="px-1.5 py-0.5 bg-blue-50 text-blue-700 text-[8px] font-bold rounded border border-blue-100">EKF</span>
+                        <span class="px-1.5 py-0.5 bg-blue-50 text-blue-700 text-[8px] font-bold rounded border border-blue-100">SLAM</span>
+                    </div>
+                </div>
+                <div class="col-span-3">
+                    <h3 class="font-bold text-sm text-slate-900">GPS & IMU Sensor Fusion for Dead Reckoning</h3>
+                    <p class="text-[10px] text-slate-500 font-mono mb-2">Northeastern University | Autonomous Vehicles</p>
+                    <p class="text-[11px] text-slate-700 leading-relaxed mb-2">
+                        Designed to maintain accurate localization in GPS-denied environments (urban canyons) using Boston Dynamics Spot robot data.
+                    </p>
+                    <div class="bg-slate-50 p-3 rounded border border-slate-200">
+                        <h4 class="text-[10px] font-bold text-slate-900 uppercase tracking-wide mb-1">Technical Implementation</h4>
+                        <ul class="text-[10px] text-slate-600 list-disc pl-3 space-y-1">
+                            <li>Built custom <strong>ROS 2 drivers</strong> (Python) for real-time sensor data acquisition from GPS and IMU.</li>
+                            <li>Analyzed IMU noise characteristics via <strong>Allan Variance</strong> and corrected hard/soft iron magnetic distortions.</li>
+                            <li>Implemented an <strong>Extended Kalman Filter (EKF)</strong> to fuse yaw angle (gyro/mag) and accelerometer bias, enabling drift-free dead reckoning when GPS signal was lost.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-slate-100">
+
+            <div class="grid grid-cols-4 gap-6">
+                <div class="col-span-1">
+                    <img src="public/assets/piezo.jpg" class="w-full h-32 object-cover rounded-lg border border-slate-200 mb-2">
+                    <div class="flex flex-wrap gap-1">
+                        <span class="px-1.5 py-0.5 bg-blue-50 text-blue-700 text-[8px] font-bold rounded border border-blue-100">MECHATRONICS</span>
+                        <span class="px-1.5 py-0.5 bg-blue-50 text-blue-700 text-[8px] font-bold rounded border border-blue-100">NPD</span>
+                    </div>
+                </div>
+                <div class="col-span-3">
+                    <h3 class="font-bold text-sm text-slate-900">Piezoelectric Load-Decoupler</h3>
+                    <p class="text-[10px] text-slate-500 font-mono mb-2">Meritorious Award Winner | Industrial Safety</p>
+                    <p class="text-[11px] text-slate-700 leading-relaxed mb-2">
+                        A mechanical safety device designed to prevent catastrophic failure in large pipe couplings under extreme axial loads.
+                    </p>
+                    <div class="bg-slate-50 p-3 rounded border border-slate-200">
+                        <h4 class="text-[10px] font-bold text-slate-900 uppercase tracking-wide mb-1">Technical Implementation</h4>
+                        <ul class="text-[10px] text-slate-600 list-disc pl-3 space-y-1">
+                            <li>Engineered a mechatronic system leveraging the <strong>piezoelectric effect</strong> to detect load variations in real-time.</li>
+                            <li>Designed a mechanism to autonomously disengage couplings when axial loads exceeded <strong>50,000N</strong>.</li>
+                            <li>Improved system safety and reliability metrics by 100% through automated failure prevention.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
     <div class="page">
         <div class="flex justify-between items-end border-b-2 border-slate-100 pb-4 mb-8">
-            <h2 class="text-2xl font-bold text-slate-900">SELECTED PROJECTS</h2>
+            <h2 class="text-lg font-bold text-slate-900 uppercase tracking-widest">Additional Engineering Projects</h2>
             <span class="text-xs font-mono text-slate-400">PAGE 03</span>
         </div>
 
-        <div class="grid grid-cols-2 gap-x-8 gap-y-10">
+        <div class="grid grid-cols-2 gap-8">
 
-            <div>
-                <div class="h-40 bg-slate-100 rounded-lg overflow-hidden mb-4 border border-slate-200">
-                    <img src="public/assets/drone.jpg.png" class="w-full h-full object-cover">
+            <div class="border border-slate-200 rounded-lg p-4">
+                <div class="flex items-center justify-between mb-2">
+                    <h3 class="font-bold text-sm text-slate-900">Autonomous Solar Cleaning Bot</h3>
+                    <span class="text-[9px] font-bold bg-blue-100 text-blue-700 px-2 py-1 rounded">OPENCV</span>
                 </div>
-                <h3 class="font-bold text-slate-900 mb-1">Autonomous Drone Racing</h3>
-                <div class="flex flex-wrap gap-1 mb-2">
-                    <span class="px-1.5 py-0.5 bg-blue-50 text-blue-700 text-[8px] font-bold rounded">PYTHON</span>
-                    <span class="px-1.5 py-0.5 bg-blue-50 text-blue-700 text-[8px] font-bold rounded">RRT</span>
-                </div>
-                <p class="text-[10px] text-slate-600 leading-relaxed text-justify">
-                    Developed a hierarchical motion planning framework. Implemented 3D RRT for topology finding and Direct Transcription (SciPy) for trajectory optimization. Reduced path length by 68.6% with smooth, flyable trajectories.
+                <p class="text-[10px] text-slate-600 leading-relaxed mb-3">
+                    Designed a 3D model (SolidWorks) and built a robot for dry/wet cleaning of solar panels. Led the development of cleaning algorithms using <strong>OpenCV</strong> and implemented communication protocols for remote management.
                 </p>
+                <div class="text-[10px] font-mono text-slate-500"><strong>Impact:</strong> Enhanced energy yield by >20% in large-scale farms.</div>
             </div>
 
-            <div>
-                <div class="h-40 bg-slate-100 rounded-lg overflow-hidden mb-4 border border-slate-200">
-                    <img src="public/assets/Nuance.jpg" class="w-full h-full object-cover">
+            <div class="border border-slate-200 rounded-lg p-4">
+                <div class="flex items-center justify-between mb-2">
+                    <h3 class="font-bold text-sm text-slate-900">Electronic Propulsion for Micro UAVs</h3>
+                    <span class="text-[9px] font-bold bg-blue-100 text-blue-700 px-2 py-1 rounded">AVIONICS</span>
                 </div>
-                <h3 class="font-bold text-slate-900 mb-1">GPS & IMU Sensor Fusion</h3>
-                <div class="flex flex-wrap gap-1 mb-2">
-                    <span class="px-1.5 py-0.5 bg-blue-50 text-blue-700 text-[8px] font-bold rounded">ROS 2</span>
-                    <span class="px-1.5 py-0.5 bg-blue-50 text-blue-700 text-[8px] font-bold rounded">EKF</span>
-                </div>
-                <p class="text-[10px] text-slate-600 leading-relaxed text-justify">
-                    Built ROS 2 drivers for real-time sensor acquisition on Boston Dynamics Spot. Implemented Extended Kalman Filter (EKF) for drift-free localization in GPS-denied environments. Corrected hard/soft iron magnetic distortions.
+                <p class="text-[10px] text-slate-600 leading-relaxed mb-3">
+                    Designed intricate electronic propulsion systems for micro-class planes. Integrated stress theory, electrical safety, and autonomous payload drop mechanisms into a cohesive aerodynamic design.
                 </p>
+                <div class="text-[10px] font-mono text-slate-500"><strong>Impact:</strong> 3rd Place Winner at ASME AEROMANIA.</div>
             </div>
 
-            <div>
-                <div class="h-40 bg-slate-100 rounded-lg overflow-hidden mb-4 border border-slate-200">
-                    <img src="public/assets/solar.jpg" class="w-full h-full object-cover">
+            <div class="border border-slate-200 rounded-lg p-4">
+                <div class="flex items-center justify-between mb-2">
+                    <h3 class="font-bold text-sm text-slate-900">MediBuddy: Smart Wound Care</h3>
+                    <span class="text-[9px] font-bold bg-blue-100 text-blue-700 px-2 py-1 rounded">IOT & SENSORS</span>
                 </div>
-                <h3 class="font-bold text-slate-900 mb-1">Autonomous Solar Cleaning Bot</h3>
-                <div class="flex flex-wrap gap-1 mb-2">
-                    <span class="px-1.5 py-0.5 bg-blue-50 text-blue-700 text-[8px] font-bold rounded">OPENCV</span>
-                    <span class="px-1.5 py-0.5 bg-blue-50 text-blue-700 text-[8px] font-bold rounded">SOLIDWORKS</span>
-                </div>
-                <p class="text-[10px] text-slate-600 leading-relaxed text-justify">
-                    Designed a robot for dry/wet cleaning of solar panels, enhancing energy yield by 20%. Led cleaning algorithm development using OpenCV and manufactured core mobility components.
+                <p class="text-[10px] text-slate-600 leading-relaxed mb-3">
+                    Developed a pH-sensitive wound care system incorporating <strong>ambient energy harvesting</strong> (eliminating batteries) and an MCU for real-time data processing. Enabled wireless transmission to smartphones for patient monitoring.
                 </p>
+                <div class="text-[10px] font-mono text-slate-500"><strong>Focus:</strong> Medical Device Design & Sensor Electronics.</div>
             </div>
 
-            <div>
-                <div class="h-40 bg-slate-100 rounded-lg overflow-hidden mb-4 border border-slate-200">
-                    <img src="public/assets/piezo.jpg" class="w-full h-full object-cover">
+            <div class="border border-slate-200 rounded-lg p-4">
+                <div class="flex items-center justify-between mb-2">
+                    <h3 class="font-bold text-sm text-slate-900">High Altitude Solar Balloon (HALO)</h3>
+                    <span class="text-[9px] font-bold bg-blue-100 text-blue-700 px-2 py-1 rounded">GREEN ENERGY</span>
                 </div>
-                <h3 class="font-bold text-slate-900 mb-1">Piezoelectric Load-Decoupler</h3>
-                <div class="flex flex-wrap gap-1 mb-2">
-                    <span class="px-1.5 py-0.5 bg-blue-50 text-blue-700 text-[8px] font-bold rounded">MECHATRONICS</span>
-                    <span class="px-1.5 py-0.5 bg-blue-50 text-blue-700 text-[8px] font-bold rounded">CONTROL</span>
-                </div>
-                <p class="text-[10px] text-slate-600 leading-relaxed text-justify">
-                    <strong>Meritorious Award Winner.</strong> Engineered a device to autonomously disengage pipe couplings under 50kN loads using piezoelectric sensors, preventing catastrophic mechanical failure.
+                <p class="text-[10px] text-slate-600 leading-relaxed mb-3">
+                    Conceptualized a modified solar panel system for tropospheric deployment. The system maximizes solar absorption rates by operating above cloud cover, extending operational time to ~20 hours/day.
                 </p>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="page">
-        <div class="flex justify-between items-end border-b-2 border-slate-100 pb-4 mb-8">
-            <h2 class="text-2xl font-bold text-slate-900">ADDITIONAL PROJECTS</h2>
-            <span class="text-xs font-mono text-slate-400">PAGE 04</span>
-        </div>
-
-        <div class="grid grid-cols-2 gap-x-8 gap-y-10">
-
-            <div>
-                <div class="h-40 bg-slate-100 rounded-lg overflow-hidden mb-4 border border-slate-200">
-                    <img src="public/assets/uav_propulsion.jpg" class="w-full h-full object-cover">
-                </div>
-                <h3 class="font-bold text-slate-900 mb-1">Micro UAV Propulsion</h3>
-                <div class="flex flex-wrap gap-1 mb-2">
-                    <span class="px-1.5 py-0.5 bg-blue-50 text-blue-700 text-[8px] font-bold rounded">AERODYNAMICS</span>
-                </div>
-                <p class="text-[10px] text-slate-600 leading-relaxed text-justify">
-                    Designed electronic propulsion systems for micro-class planes. Integrated stress theory and electrical safety for autonomous payload drops. Won 3rd place in AEROMANIA.
-                </p>
-            </div>
-
-            <div>
-                <div class="h-40 bg-slate-100 rounded-lg overflow-hidden mb-4 border border-slate-200">
-                    <img src="public/assets/medibuddy.jpg" class="w-full h-full object-cover">
-                </div>
-                <h3 class="font-bold text-slate-900 mb-1">MediBuddy: Smart Wound Care</h3>
-                <div class="flex flex-wrap gap-1 mb-2">
-                    <span class="px-1.5 py-0.5 bg-blue-50 text-blue-700 text-[8px] font-bold rounded">IOT</span>
-                    <span class="px-1.5 py-0.5 bg-blue-50 text-blue-700 text-[8px] font-bold rounded">SENSORS</span>
-                </div>
-                <p class="text-[10px] text-slate-600 leading-relaxed text-justify">
-                    Developed a pH-sensitive wound care system with ambient energy harvesting (no batteries). Integrated MCU for real-time processing and wireless data transmission to smartphones.
-                </p>
-            </div>
-
-            <div>
-                <div class="h-40 bg-slate-100 rounded-lg overflow-hidden mb-4 border border-slate-200">
-                    <img src="public/assets/halo.jpg" class="w-full h-full object-cover">
-                </div>
-                <h3 class="font-bold text-slate-900 mb-1">High Altitude Solar Balloon (HALO)</h3>
-                <div class="flex flex-wrap gap-1 mb-2">
-                    <span class="px-1.5 py-0.5 bg-blue-50 text-blue-700 text-[8px] font-bold rounded">GREEN ENERGY</span>
-                </div>
-                <p class="text-[10px] text-slate-600 leading-relaxed text-justify">
-                    Conceptualized a tropospheric solar panel system for higher absorption and 20hr/day operation. Focused on maximizing efficiency through high-altitude deployment.
-                </p>
+                <div class="text-[10px] font-mono text-slate-500"><strong>Focus:</strong> Engineering Design & Efficiency Optimization.</div>
             </div>
 
         </div>
