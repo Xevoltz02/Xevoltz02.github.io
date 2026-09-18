@@ -45,6 +45,10 @@
             transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
 
+        .skill-card.skill-card-compact {
+            padding: 0.85rem;
+        }
+
         .skill-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
@@ -60,7 +64,7 @@
         }
 
         .skill-card:hover .tools-reveal {
-            max-height: 100px;
+            max-height: 160px;
             opacity: 1;
             transform: translateY(0);
         }
@@ -101,8 +105,8 @@
 
     <section id="about" class="pt-32 pb-20 px-6 relative overflow-hidden">
         <div class="absolute inset-0 grid-bg -z-10 opacity-60"></div>
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div>
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+            <div class="order-2 md:order-1">
                 <div class="inline-block px-3 py-1 bg-blue-100 text-blue-700 font-mono text-xs font-bold rounded mb-6">
                     M.S. ROBOTICS @ NORTHEASTERN
                 </div>
@@ -110,94 +114,72 @@
                     Raghav Kumar <br>
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Agarwal</span>
                 </h1>
-                <p class="text-lg text-slate-600 mb-8 max-w-lg leading-relaxed">
-                    <b>Bridging Robotics, Design, and Intelligent Automation.</b>
-                    <br><br>
-                    Bridging the gap between research and industry is my primary focus. I specialize in designing autonomous systems capable of real-time navigation and decision-making. Whether working on localization algorithms or intelligent drone fleets, I aim to create scalable solutions that push the boundaries of efficiency. I thrive where automation meets mechanical design, turning complex theories into reliable, real-world applications.
-                    <hr class="border-slate-300 my-4">
-                    </p>
-                
-                <div class="grid grid-cols-2 gap-4 mb-8">
-                    
-                    <div class="skill-card">
-                        <i data-lucide="eye" class="text-blue-600 mb-2 w-6 h-6"></i>
-                        <h3 class="font-bold text-sm text-slate-900">Perception & SLAM</h3>
-                        <p class="text-xs text-slate-500 mt-1">Visual Odometry & Fusion</p>
-                        <div class="tools-reveal">
-                            <span class="tool-tag">ORB-SLAM3</span>
-                            <span class="tool-tag">RTAB-Map</span>
-                            <span class="tool-tag">OAK-D</span>
-                        </div>
-                    </div>
 
-                    <div class="skill-card">
-                        <i data-lucide="bot" class="text-blue-600 mb-2 w-6 h-6"></i>
-                        <h3 class="font-bold text-sm text-slate-900">Robotics Systems</h3>
-                        <p class="text-xs text-slate-500 mt-1">ROS 2 Arch. & Nav2</p>
-                        <div class="tools-reveal">
-                            <span class="tool-tag">ROS 2 Humble</span>
-                            <span class="tool-tag">Nav2</span>
-                            <span class="tool-tag">Python/C++</span>
-                        </div>
-                    </div>
+                <p class="border-l-4 border-blue-600 pl-5 py-1 text-xl md:text-2xl font-bold text-slate-900 leading-snug mb-6 max-w-xl">
+                    Building intelligent autonomy through precision hardware.
+                </p>
 
-                    <div class="skill-card">
-                        <i data-lucide="plane" class="text-blue-600 mb-2 w-6 h-6"></i>
-                        <h3 class="font-bold text-sm text-slate-900">Embedded Avionics</h3>
-                        <p class="text-xs text-slate-500 mt-1">Propulsion & Payload</p>
-                        <div class="tools-reveal">
-                            <span class="tool-tag">STM32</span>
-                            <span class="tool-tag">PCB Design</span>
-                            <span class="tool-tag">Safety Sys</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <i data-lucide="box" class="text-blue-600 mb-2 w-6 h-6"></i>
-                        <h3 class="font-bold text-sm text-slate-900">Simulation</h3>
-                        <p class="text-xs text-slate-500 mt-1">Validation & CI/CD</p>
-                        <div class="tools-reveal">
-                            <span class="tool-tag">Gazebo</span>
-                            <span class="tool-tag">Docker</span>
-                            <span class="tool-tag">URDF</span>
-                        </div>
-                    </div>
-
+                <div class="text-base text-slate-600 leading-relaxed max-w-xl space-y-4">
+                    <p>Robotics shouldn't end at the code, and mechanical design shouldn't stop at CAD. I love bringing the two together, there's nothing quite like watching an abstract mathematical model spin up on physical hardware and conquer the real world.</p>
+                    <p>Pure software is fascinating, but it really comes alive when paired with the physics of motors, linkages, and structural dynamics. I build end-to-end: first-principles autonomy paired with hands-on mechanical craft, so every system runs seamlessly.</p>
                 </div>
-                
-                <div class="flex gap-4">
+
+                <p class="mt-8 mb-4 text-xs font-mono font-bold uppercase tracking-widest text-slate-400">What I get excited about</p>
+                <div class="grid sm:grid-cols-3 gap-3 mb-8">
+                    <div class="bg-white border border-slate-200 rounded-lg p-4 hover:border-blue-400 hover:shadow-md transition-all">
+                        <i data-lucide="route" class="text-blue-600 mb-2 w-5 h-5"></i>
+                        <h4 class="font-bold text-sm text-slate-900 mb-1">Autonomy & Dynamic Motion</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Trajectory planners and multi-sensor state estimation (EKF, IMU fusion) for agile navigation.</p>
+                    </div>
+                    <div class="bg-white border border-slate-200 rounded-lg p-4 hover:border-blue-400 hover:shadow-md transition-all">
+                        <i data-lucide="cog" class="text-blue-600 mb-2 w-5 h-5"></i>
+                        <h4 class="font-bold text-sm text-slate-900 mb-1">Precision Machining & FEA</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">5-axis CNC toolpaths, custom adapters, and dynamic stress validation in the shop.</p>
+                    </div>
+                    <div class="bg-white border border-slate-200 rounded-lg p-4 hover:border-blue-400 hover:shadow-md transition-all">
+                        <i data-lucide="package-check" class="text-blue-600 mb-2 w-5 h-5"></i>
+                        <h4 class="font-bold text-sm text-slate-900 mb-1">Rugged Mechatronic Packaging</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Optical metrology, active sensors, and electronics in IP67-sealed field enclosures.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative order-1 md:order-2 md:sticky md:top-24">
+                <div class="flex gap-4 mb-6">
                     <a href="https://github.com/your-github-username" target="_blank" class="p-2 text-slate-500 hover:text-slate-900 transition-colors"><i data-lucide="github"></i></a>
                     <a href="https://linkedin.com/in/raghavkragarwal" target="_blank" class="p-2 text-slate-500 hover:text-blue-700 transition-colors"><i data-lucide="linkedin"></i></a>
                     <a href="mailto:agarwal.rag@northeastern.edu" class="p-2 text-slate-500 hover:text-red-600 transition-colors"><i data-lucide="mail"></i></a>
                     <a href="tel:+18573399025" class="p-2 text-slate-500 hover:text-green-600 transition-colors"><i data-lucide="phone"></i></a>
                 </div>
-            </div>
-            
-            <div class="relative">
-                <div class="relative w-full aspect-square bg-slate-200 rounded-2xl overflow-hidden border-4 border-white shadow-2xl">
-                    <img src="public/assets/profile.jpg" alt="Raghav Agarwal" class="w-full h-full object-cover">
-                    <div class="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md p-4 border-t border-slate-200">
-                        <div class="flex justify-between items-center font-mono text-xs">
-                            <span class="text-slate-500">EMAIL</span>
-                            <span class="font-bold text-slate-900">agarwal.rag@northeastern.edu</span>
+
+                <div class="relative max-w-sm mx-auto">
+                    <div class="relative aspect-square bg-slate-200 rounded-2xl overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="public/assets/profile.jpg" alt="Raghav Agarwal" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md p-3 border-t border-slate-200">
+                            <div class="flex justify-between items-center font-mono text-[10px]">
+                                <span class="text-slate-500">EMAIL</span>
+                                <span class="font-bold text-slate-900">agarwal.rag@northeastern.edu</span>
+                            </div>
                         </div>
                     </div>
+                    <div class="absolute -z-10 top-6 -right-6 w-full h-full bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl opacity-90"></div>
+                    <div class="absolute -bottom-4 -left-4 bg-slate-900 text-white rounded-lg px-3 py-2 shadow-xl flex items-center gap-1.5">
+                        <i data-lucide="map-pin" class="w-3.5 h-3.5 text-blue-400"></i>
+                        <span class="text-[10px] font-mono font-bold tracking-wide">BOSTON, MA</span>
+                    </div>
                 </div>
-                <div class="absolute -z-10 top-10 -right-10 w-full h-full border-2 border-slate-200 rounded-2xl"></div>
             </div>
         </div>
-    </section>
 
-    <section class="py-16 bg-slate-900 text-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <h3 class="text-xs font-mono text-slate-400 mb-6 tracking-widest uppercase">Technical Arsenal</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 opacity-90" id="skills-list">
-            </div>
+        <div class="max-w-6xl mx-auto px-0 mt-16">
+            <p class="text-2xl md:text-3xl font-bold text-slate-900 leading-snug">
+                The best part of engineering is seeing ambitious ideas leave the screen and start running, flying, or measuring in the real world. If you love building machines that solve real problems with great craft, I'd love to connect!
+            </p>
         </div>
     </section>
 
     <section id="experience" class="py-20 bg-white">
-        <div class="max-w-4xl mx-auto px-6">
+        <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-3xl font-bold text-slate-900 mb-12 flex items-center gap-3">
                 <i data-lucide="briefcase" class="text-blue-600"></i> Professional Experience
             </h2>
@@ -213,7 +195,7 @@
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
                     <i data-lucide="graduation-cap" class="text-blue-600"></i> Education
                 </h2>
-                <div id="education-list" class="grid md:grid-cols-2 gap-8"></div>
+                <div id="education-list" class="flex flex-col gap-8"></div>
             </div>
 
             <div>
@@ -226,6 +208,14 @@
         </div>
     </section>
 
+    <section class="py-16 bg-slate-900 text-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h3 class="text-xs font-mono text-slate-400 mb-6 tracking-widest uppercase">Technical Arsenal</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 opacity-90" id="skills-list">
+            </div>
+        </div>
+    </section>
+
     <section id="projects" class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-6">
             <div class="flex justify-between items-end mb-12">
@@ -234,7 +224,7 @@
                     <p class="text-slate-500">Engineering solutions from concept to deployment.</p>
                 </div>
                 <div class="hidden md:block">
-                    <span class="text-xs font-mono bg-slate-200 px-2 py-1 rounded text-slate-600">M.S. & B.Tech. Portfolio</span>
+                    <span class="text-xs font-mono bg-slate-200 px-2 py-1 rounded text-slate-600">Industry & Academic Portfolio</span>
                 </div>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-container">
@@ -342,54 +332,115 @@
     <script>
         const DATA = {
             skills: [
-                { cat: "LANGUAGES", items: "PYTHON, C++, C, MATLAB, CUDA, BASH" },
-                { cat: "ROBOTICS & AI", items: "ROS 2, SLAM, OpenCV, PID, Kalman Filters, MoveIt, NAV2" },
-                { cat: "EMBEDDED & HARDWARE", items: "Raspberry Pi (3/4/Zero), Arduino, Pixhawk, ArduPilot, GPS/IMU's, IoT Devices, I2C/SPI/UART" },
-                { cat: "INDUSTRIAL & TOOLS", items: "SolidWorks, Autodesk Fusion 360, AutoCAD, MATLAB Simulink, Linux, Git, Docker, CNC Machining, 3D Printing" }
+                { cat: "MECHANICAL DESIGN & SIMULATION", items: "Autodesk Fusion 360, SolidWorks (Certified: CSWA – Design Associate, Additive Manufacturing Associate), Finite Element Analysis (FEA – Static Stress, Deflection, 10,000-Cycle Fatigue Life), Thermal Simulation & Heat Dissipation, Geometric Dimensioning & Tolerancing (GD&T), Modular IP67 Enclosure Sealing, Fixed/Variable UAV Airframe & Propulsion Integration" },
+                { cat: "LANGUAGES & COMPUTATION", items: "C++, Python, C, CUDA, MATLAB, Bash, SciPy, NumPy" },
+                { cat: "AUTONOMY, PLANNING & CONTROL", items: "ROS 2, Extended Kalman Filtering (EKF), SLAM, State Estimation, Trajectory Optimization (Direct Transcription, SLSQP), Motion Planning (RRT), OpenCV, Closed-Loop Motor Control" },
+                { cat: "SENSORS, OPTICS & METROLOGY", items: "Sensor Fusion, Allan Variance Analysis, IMU / AHRS Arrays, Optical Triangulation, Time-of-Flight (ToF), Optical Filtering (Bandpass), Intrinsic & Extrinsic Camera Calibration (Thermal/Optical), Magnetometer Calibration (Hard/Soft-Iron), Global-Shutter Vision, Piezoelectric Transducers, Non-Destructive Testing (NDT)" },
+                { cat: "EMBEDDED, PROPULSION & POWER", items: "Microcontroller (MCU) Integration, BLDC Drive Systems, Electronic Speed Controllers (ESCs), Remote Command & Telemetry Links, Ambient Energy Harvesting (Battery-Free Systems), Electrical Safety & Thermal Protection" },
+                { cat: "MANUFACTURING & FABRICATION", items: "Haas 5-Axis CNC Milling, CNC Lathe with Live Tooling, Computer-Aided Manufacturing (CAM), Precision Fixturing (Dovetail), Thread Milling, Rapid Prototyping (FDM / Additive Manufacturing), High-Strength Alloys (Al 6061-T6, Al 7075)" },
+                { cat: "SYSTEMS ENGINEERING & INDUSTRY STANDARDS", items: "Structural Health Monitoring (SHM), General Assembly Line Balancing & Idle-Time Optimization, Bill of Materials (BOM) Management, Regulatory Compliance (IEC 60950, IEC 61010, ISO 9001, ISO 14001, ISO 55001)" }
             ],
             experience: [
+                {
+                    id: 100, category: "experience", company: "aRoboticsCompany",
+                    companyUrl: "https://arcinc.com/",
+                    role: "Mechanical Engineer",
+                    period: "June 2026 - Sept 2026", location: "Ossining, NY",
+                    desc: "Owned mechanical design, precision manufacturing, and embedded sensing across multiple R&D robotics platforms - from high-torque structural systems to real-time optical and inertial metrology.",
+                    stack: ["FEA / STRUCTURAL", "CNC / DFM", "GAS SYSTEMS", "ROBOTIC PERCEPTION", "SENSOR FUSION"],
+                    cards: [
+                        {
+                            title: "Mechanical Engineering Focus",
+                            bullets: [
+                                { keyword: "Structural Analysis & FEA", text: "Designed high-load reaction mechanisms and structural adapters to absorb 380 Nm instantaneous impact loads during autonomous bolt disassembly; iterated static FEA in Fusion 360 to mitigate stress concentrations, reducing peak stress to 265 MPa, achieving a 1.89 safety factor on Al 7075, and validating for 10,000-cycle fatigue life." },
+                                { keyword: "Precision CNC Machining & DFM/DFA", text: "Applied rigorous DFM principles by matching internal feature radii to 3/8\" tooling and standardizing fasteners, manufacturing components on Haas 5-axis mills and live-tooling lathes using single-setup dovetail fixturing; engineered an IP67-rated modular aluminum enclosure with thermal-paste heat sinking, reducing overall mass by 40% and package volume by 30%." },
+                                { keyword: "Fluids, Thermal & Pneumatic Systems", text: "Architected an integrated gas-conditioning and separation infrastructure utilizing a 5HP/175 PSI compressor, refrigerated dryers, and membrane separation to supply 99.95%-pure nitrogen; engineered a custom delivery nozzle maintaining a laminar shielding envelope (80 psi, 60 SCFM at 2ft standoff) to eliminate oxidation during robotic laser processing." }
+                            ]
+                        },
+                        {
+                            title: "Software & Embedded Systems Focus",
+                            bullets: [
+                                { keyword: "Robotic Perception & Kinematic Control", text: "Integrated tactile surface perception (±1mm accuracy) onto a 6-DOF Fanuc CRX-10iA manipulator, calculating real-time workpiece offsets to actively avoid collisions and prevent Jacobian rank loss (kinematic singularities) during complex non-linear contour tracking." },
+                                { keyword: "Computer Vision & Sensor Fusion Algorithms", text: "Formulated a first-principles triangulation model combining a line laser, ToF depth sensor, and global-shutter camera; developed real-time 2D coordinate leveling to eliminate operator wrist tilt, implementing a linearized pinhole projection algorithm that delivers sub-millimeter surface profilometry invariant to standoff distance drift." },
+                                { keyword: "Embedded Interfacing & Kinematic State Estimation", text: "Authored an object-oriented Python kinematics engine processing 50Hz serial data streams ($VNYPR via RS-422) from an 8-IMU AHRS array; implemented automated tare-offset calibrations and parabolic double numerical integration to isolate dynamic bridge deck torsion, vertical sag, and hinge-pin discontinuity angles in real time." }
+                            ]
+                        }
+                    ]
+                },
                 {
                     id: 101, category: "experience", company: "TATA Power Solar Systems Pvt. Ltd.",
                     role: "Research & Development Intern",
                     period: "Jan 2024 - July 2024", location: "India",
                     logo: "public/assets/tata.jpg",
-                    desc: "Enhanced 4G data acquisition system for solar farms and microgrid regions, ensuring optimized data collection and consistency.",
-                    details: [
-                        "Deployed and enhanced the 4G data acquisition system for solar panels in solar farms and microgrid commercial regions.",
-                        "Improved enclosure design via thermal simulation, boosting heat dissipation by 25% and increasing system stability.",
-                        "Led inspections and quality control procedures, ensuring product compliance with industry standards like IEC 60950, IEC 61010, ISO 9001, ISO 55001 and ISO 14001."
-                    ],
-                    stack: ["4G DATA ACQ.", "THERMAL SIM.", "ISO/IEC STDS", "QC"]
+                    desc: "Redesigned field enclosure thermal architecture and led QC/compliance for i-TAPS, Tata Power Solar's SIM-based, cloud-enabled data logger hardware powering their national NOC remote monitoring platform.",
+                    stack: ["i-TAPS / 4G DATA ACQ.", "THERMAL SIM.", "ISO/IEC STDS", "QC"],
+                    cards: [
+                        {
+                            title: "Thermal & Systems Engineering",
+                            bullets: [
+                                { keyword: "Enclosure Thermal Redesign", text: "Identified a heat-dissipation bottleneck in the field enclosure of i-TAPS, Tata Power Solar's SIM-based data logger unit, and used thermal simulation and circuit analysis to redesign its geometry and internal layout, improving heat dissipation by 25% in a sealed, non-actively-cooled outdoor unit." },
+                                { keyword: "System Architecture & Interface Specs", text: "Developed system architecture drawings and interface specifications between the 4G data logger and panel/inverter sensors, precise enough for field technicians to install and service consistently across many sites." },
+                                { keyword: "PCBA & BOM Auditing", text: "Managed PCBA-level design considerations feeding into the thermal redesign, and audited Bills of Materials to ensure component specifications matched what was actually deployed in production." }
+                            ]
+                        },
+                        {
+                            title: "Quality, Compliance & Field Reliability",
+                            bullets: [
+                                { keyword: "Standards Compliance", text: "Led inspections and QC procedures verifying hardware and documentation against IEC 60950 and IEC 61010 safety standards, plus ISO 9001, ISO 55001, and ISO 14001, before clearing units for field deployment." },
+                                { keyword: "NOC-Based Remote Monitoring", text: "Supported the field-deployed data logger hardware feeding Tata Power Solar's NOC (Network Operating Center) - India's first of its kind - enabling real-time plant performance, generation and inverter tracking, irradiance and ambient temperature monitoring, and utility supply downtime alerts across dispersed solar farms and microgrid sites, reducing dependence on physical site visits." }
+                            ]
+                        }
+                    ]
                 },
                 {
                     id: 102, category: "experience", company: "OLA Electric Technologies Pvt. Ltd.",
                     role: "Project Intern",
                     period: "June 2022 - July 2022", location: "India",
                     logo: "public/assets/ola.jpg",
-                    desc: "Optimized General Assembly line for the EV electric scooter (Ola S1 Pro) and improved production quality by 15%.",
-                    details: [
-                        "Analyzed and optimized the General Assembly line for the EV electric scooter (Ola S1 Pro).",
-                        "Optimized idle time on the assembly line, and coordinated with different sub-assemblies to improve production quality by 15%.",
-                        "Achieved increased manufacturing efficiency by 15% by re-designing the subassembly structure."
-                    ],
-                    stack: ["PROCESS OPT.", "ASSEMBLY LINE", "MANUFACTURING"]
+                    desc: "Optimized General Assembly line sequencing and subassembly structure for the Ola S1 Pro electric scooter, improving production quality and manufacturing efficiency by 15% each.",
+                    stack: ["PROCESS OPT.", "ASSEMBLY LINE", "MANUFACTURING"],
+                    cards: [
+                        {
+                            title: "General Assembly Line Optimization",
+                            bullets: [
+                                { keyword: "Idle-Time Reduction & Coordination", text: "Analyzed the General Assembly line for the Ola S1 Pro to identify where and why idle time occurred between sub-assembly stations, then optimized sequencing and coordination - improving production quality by 15% by reducing the rushed, poorly-synchronized work that tends to introduce assembly defects." },
+                                { keyword: "Subassembly Redesign", text: "Redesigned the subassembly structure - changing operation order and how components were staged before reaching the main line - reducing total work content and rework per unit, contributing a 15% increase in manufacturing efficiency independent of the line-synchronization work." }
+                            ]
+                        }
+                    ]
                 },
                 {
                     id: 103, category: "experience", company: "ASME Projects Team, VIT India",
                     role: "Mechatronics Head",
                     period: "Aug 2021 - July 2023", location: "India",
-                    desc: "Spearheaded autonomous drone development for payload delivery (up to 400g) and manufactured custom electronic propulsion systems.",
-                    details: [
-                        "Spearheaded the development of autonomous drones for payload delivery of up to 400g.",
-                        "Developed and manufactured remote controlled electronic propulsion systems for UAVs (fixed/oblique/dihedral)."
-                    ],
-                    stack: ["UAV", "MECHATRONICS", "PROPULSION SYS."]
+                    desc: "Led propulsion system design for a 15-person team across competition drones, micro-class fixed-wing aircraft, and a from-scratch soil-sampling robotic arm.",
+                    stack: ["UAV", "MECHATRONICS", "PROPULSION SYS."],
+                    cards: [
+                        {
+                            title: "Autonomous Drone Path Planning",
+                            bullets: [
+                                { keyword: "Onboard RRT Path Planning", text: "Implemented RRT-based path planning running onboard a Raspberry Pi, interfacing directly with the ArduPilot/Pixhawk flight-controller stack for real-time autonomous navigation - rather than precomputed or ground-station planning - contributing to the team winning national-level competitions." }
+                            ]
+                        },
+                        {
+                            title: "Micro-Class Fixed-Wing Propulsion",
+                            bullets: [
+                                { keyword: "Thrust-to-Weight Optimization", text: "Defined propulsion components (motors, propellers, battery selection) against thrust-to-weight requirements specific to each airframe, while minimizing onboard electronics weight to preserve the aircraft's usable thrust-to-weight margin." }
+                            ]
+                        },
+                        {
+                            title: "Robotic Arm for Soil Sample Collection",
+                            bullets: [
+                                { keyword: "Ground-Up Arm Design", text: "Built a robotic arm from scratch for rover/AGV platforms with a 250g payload capacity, engineered to reliably grip, lift, and retain soil samples without dropping or contaminating them within the host platform's size and power constraints." }
+                            ]
+                        }
+                    ]
                 }
             ],
             education: [
                 {
                     school: "Northeastern University",
-                    degree: "M.S. in Mechatronics, Robotics, and Automation Engineering",
+                    degree: "M.S. in Robotics and Automation Engineering",
                     period: "Sep 2024 - Present",
                     location: "Boston, MA",
                     courses: [
@@ -440,114 +491,230 @@
                 {
                     id: 1, category: "project", title: "Autonomous Drone Racing",
                     tags: ["Trajectory Opt.", "Path Planning", "SciPy", "Python"],
-                    desc: "Developed a hierarchical motion planning framework using 3D RRT and Direct Transcription to generate smooth, dynamically feasible flight paths.",
+                    desc: "Built a two-stage motion planner that turns a jagged, unflyable RRT path through aerial hoops into a smooth, actuator-feasible racing trajectory - cutting path length by 68.6%.",
                     details: [
-                        "Addressed the issue of jagged, inefficient trajectories in raw RRT algorithms that are unflyable at high speeds.",
-                        "Implemented a 3D RRT algorithm to find an initial collision-free topology through aerial hoops and obstacles.",
-                        "Formulated a Direct Transcription trajectory optimization problem, solving it using the SLSQP algorithm via SciPy to ensure dynamic feasibility.",
-                        "Enforced physics-based constraints (terminal velocity model), boundary conditions, and obstacle avoidance while minimizing control jerk and energy usage.",
-                        "The final pipeline reduced path length by 68.6% compared to raw RRT, generating smooth, flyable trajectories that strictly adhere to actuator limits."
+                        "Raw RRT (Rapidly-exploring Random Tree) planning finds a collision-free route through 3D space, but its randomly sampled tree produces jagged, disconnected segments that a drone can't physically follow at racing speed without exceeding motor and control-surface limits.",
+                        "Stage 1: ran a 3D RRT search to find an initial collision-free topological path through the hoops and obstacles - useful as a rough guide, not as a flyable trajectory.",
+                        "Stage 2: reformulated that raw path as a Direct Transcription trajectory optimization problem, discretizing it into states and solving with the SLSQP algorithm via SciPy to enforce real dynamic feasibility.",
+                        "Enforced a terminal velocity model, start/end boundary conditions, and continued obstacle avoidance while minimizing control jerk (rate of change of acceleration) and total energy usage.",
+                        "Result: a trajectory 68.6% shorter than the raw RRT output while staying strictly within actuator limits - shorter and actually flyable at competitive racing speed."
                     ],
                     stack: ["PYTHON", "SCIPY", "RRT", "OPTIMIZATION"], image: "public/assets/drone.jpg.png"
                 },
                 {
                     id: 2, category: "project", title: "GPS & IMU Sensor Fusion for Automotive Dead Reckoning",
-                    tags: ["ROS 2", "EKF", "SLAM", "Python", "Boston Dynamics Spot"],
-                    desc: "Built custom Python ROS 2 drivers for real-time sensor data acquisition and deployed an Extended Kalman Filter (EKF) for drift-free localization in GPS-lacking environments.",
+                    tags: ["ROS 2", "EKF", "SLAM", "Python", "NUANCE"],
+                    desc: "Built custom ROS 2 drivers and an Extended Kalman Filter for NUANCE, Northeastern's autonomous car, to keep localization accurate through GPS-denied stretches of city driving.",
                     details: [
-                        "Built and deployed custom Python based ROS2 drivers for real-time sensor data acquisition from GPS and IMU mounted on NUANCE (NEU's Autonomous Car) for localization and navigation in outdoor city environments.",
-                        "Analyzed IMU's noise characteristics through Allan Variance and calibrated magnetometer by correcting hard and soft iron distortions along with error compensation in IMU and GPS data.",
-                        "Compensated for accelerometer bias to estimate vehicle's forward velocity, and fused yaw angle computed from gyroscope and magnetometer data to estimate heading for Dead Reckoning with IMU.",
-                        "Performed sensor fusion by implementing Extended Kalman Filtering (EKF) to get an improved estimate of vehicle's overall trajectory including GPS-lacking environments."
+                        "GPS quality degrades or disappears in urban canyons and dense tree cover; dead reckoning bridges those gaps by integrating motion forward from the last good fix, but raw IMU integration drifts as small sensor errors accumulate.",
+                        "Built and deployed custom Python-based ROS 2 drivers for real-time GPS and IMU acquisition on NUANCE, Northeastern's autonomous car, for outdoor city-driving localization and navigation.",
+                        "Ran Allan Variance analysis on the IMU to separate distinct noise sources (angle random walk vs. bias instability) across time scales, then calibrated the magnetometer by correcting hard-iron distortion (constant field offset from magnetized vehicle material) and soft-iron distortion (field-shape distortion from nearby magnetic material).",
+                        "Compensated for accelerometer bias to derive accurate forward velocity, then fused gyroscope and corrected-magnetometer yaw for a reliable heading estimate.",
+                        "Implemented an Extended Kalman Filter (EKF) to fuse GPS and IMU streams, maintaining accurate trajectory estimation through GPS-denied stretches and correcting accumulated drift whenever GPS became available again."
                     ],
                     stack: ["ROS 2", "PYTHON", "EKF", "SLAM"], image: "public/assets/Nuance.jpg"
                 },
                 {
                     id: 3, category: "project", title: "Autonomous Solar Cleaning Bot",
                     tags: ["OpenCV", "3D Design", "Robotics", "Energy Yield"],
-                    desc: "Designed an autonomous robot for efficient dry and wet cleaning of solar panels, enhancing energy yield by more than 20%.",
+                    desc: "Designed an autonomous dry/wet cleaning robot for grid-scale solar farms, replacing labor-intensive manual cleaning and lifting panel energy yield by more than 20%.",
                     details: [
-                        "Designed a 3D model of an autonomous robot to efficiently perform dry and wet cleaning for solar panels in grid type solar farms, enhancing energy yield by more than 20% in large-scale farms.",
-                        "Led the development of cleaning algorithms using OpenCV and communication protocols while overseeing the manufacturing and assembly of core mobility components, enabling autonomous operation with real-time monitoring."
+                        "Solar panels in large grid-type farms lose efficiency over time to dust, debris, and residue buildup; manual cleaning doesn't scale across large farm footprints, so the project targeted a fully autonomous robot for both dry and wet cleaning cycles.",
+                        "Designed the complete 3D model and system architecture for the robot, enhancing energy yield by more than 20% in large-scale farm deployment.",
+                        "Led development of the cleaning algorithms using OpenCV for edge detection, enabling precise autonomous navigation across panel surfaces, including inclined arrays.",
+                        "Developed the closed-loop motor control algorithms and electrical wiring architecture, plus the communication protocols the robot uses for coordination.",
+                        "Managed the full lifecycle from BOM selection through final mechatronic assembly, overseeing manufacturing of the core mobility components and enabling autonomous operation with real-time monitoring."
                     ],
                     stack: ["OPENCV", "3D DESIGN", "MOBILITY", "CONTROL"], image: "public/assets/solar.jpg"
                 },
                 {
                     id: 4, category: "project", title: "Piezoelectric Load-Decoupler",
                     tags: ["Mechatronics", "Control Systems", "Award Winner"],
-                    desc: "Engineered a piezoelectric-based mechatronic device for autonomous disengagement of couplings for large pipes when axial loads exceed 50,000N.",
+                    desc: "Engineered a piezoelectric-based mechatronic device that autonomously disengages large pipe couplings before a 50,000 N overload can cause structural failure - earning VIT's Meritorious Award.",
                     details: [
-                        "Engineered a piezoelectric-based mechatronic device for autonomous disengagement of couplings for large pipes when axial loads exceed a 50000N, effectively preventing mechanical failures.",
-                        "Leveraged the piezoelectric material to detect load variations and executed automatic control actions to improve the safety and reliability by 100%."
+                        "Large industrial pipe couplings can fracture or separate under excess axial load; traditional protection relies on manual inspection/shutdown or single-use mechanical overload devices (springs, shear pins) that are either too slow to react or non-adjustable.",
+                        "Engineered a piezoelectric-based mechatronic device that autonomously disengages the coupling when axial load exceeds 50,000 N, preventing mechanical failure before it happens.",
+                        "Leveraged the piezoelectric effect - certain crystalline materials generate a measurable electrical charge proportional to mechanical stress - to continuously sense real-time load through the coupling.",
+                        "When the sensed load crosses the 50,000 N threshold, the system executes an automatic control action to disengage the coupling, converting a passive structural safety margin into an active, continuously-monitored one.",
+                        "Reported outcome: a 100% improvement in safety and reliability versus the coupling's prior unprotected state."
                     ],
                     stack: ["PIEZOELECTRIC", "MECHATRONICS", "NPD"], image: "public/assets/piezo.jpg"
                 },
                 {
                     id: 5, category: "project", title: "Electronic Propulsion Systems for Micro UAVs",
                     tags: ["Aerodynamics", "UAV", "Electronic Propulsion", "Payload Drop"],
-                    desc: "Designed and implemented intricate electronic propulsion systems for micro-class planes, integrating aerodynamics, electrical safety, and autonomous payload drop mechanisms.",
+                    desc: "Designed the complete propulsion and electronics system for micro-class fixed-wing aircraft across multiple wingspans, including an autonomous payload-drop mechanism - helping the aircraft place 3rd at AEROMANIA.",
                     details: [
-                        "Played a pivotal role in designing and implementing electronic systems for micro-class planes with diverse wing spans.",
-                        "The project encompassed an array of critical areas, including aerodynamics, electronic propulsion, stress theory, electrical safety, signalling systems, and autonomous payload drop mechanisms.",
-                        "Conceptualized and crafted intricate electronic systems, ensuring they functioned seamlessly within the constraints of micro-class planes.",
-                        "This project represented a harmonious synergy of technical proficiency and creative problem-solving, underscoring my commitment to pushing the boundaries of aerospace propulsion systems."
+                        "Micro-class fixed-wing aircraft have very little design margin - every gram of weight and milliamp of current draw affects flight performance, so propulsion and electronics had to be simultaneously lightweight, electrically safe, and capable of autonomous payload drop.",
+                        "Designed and implemented the complete electronic propulsion system across multiple wingspan configurations, matching propulsion choice to each airframe's lift/drag characteristics (aerodynamics) and selecting/integrating motors and ESCs (electronic propulsion).",
+                        "Verified mounting points and structural attachment for propulsion hardware against in-flight loads (stress theory), and prevented shorts and thermal issues within a tightly packed, weight-constrained electronics bay (electrical safety).",
+                        "Built reliable command and telemetry links to the aircraft (signaling systems), and designed an autonomous payload drop mechanism with a mechanical release system and real-time triggering logic rather than manual/RC-triggered release.",
+                        "This propulsion and electronics work directly supported the aircraft placing 3rd at AEROMANIA, ASME E-fest."
                     ],
                     stack: ["AERODYNAMICS", "PROPULSION", "ELECTRICAL SAFETY", "SIGNALLING"], image: "public/assets/uav_propulsion.jpg"
                 },
                 {
                     id: 6, category: "project", title: "MediBuddy: pH-Sensitive Wound Care System",
                     tags: ["Healthtech", "Sensor Tech", "Energy Harvesting", "Medical Device"],
-                    desc: "A revolutionary wound care system with pH-sensitive sensors, integrating ambient energy harvesting and an MCU for real-time data processing and wireless transmission.",
+                    desc: "Designed a battery-free wound care sensor combining pH-sensitive sensing, ambient energy harvesting, and wireless transmission for continuous, clinician-free wound monitoring.",
                     details: [
-                        "A wound care system equipped with pH-sensitive sensors technology. To ensure sustainable operation, we integrated ambient energy harvesting technology, eliminating the need for batteries, and incorporated a Microcontroller Unit (MCU) for real-time data processing, enabling swift decision-making in healthcare contexts.",
-                        "Designed the system to facilitate wireless data transmission to devices such as smartphones, enhancing user convenience and accessibility.",
-                        "The development was driven by a strong emphasis on user-centric design, aiming for widespread adoption and improved patient outcomes.",
-                        "This project highlights my expertise in leveraging cutting-edge technologies to advance healthcare solutions and underscores my commitment to innovation in medical device design and development."
+                        "Traditional wound monitoring requires manual, periodic physical inspection to catch infection, improper healing, or pH imbalance; a continuous embedded sensor can catch these issues earlier with far less clinical overhead.",
+                        "Built a wound care system around pH-sensitive sensor technology for continuous, real-time wound condition monitoring.",
+                        "Integrated ambient energy harvesting technology to eliminate the need for a battery entirely - a key requirement for a device worn long-term against a healing wound.",
+                        "Incorporated a microcontroller unit (MCU) for real-time on-device data processing, enabling fast decision-making on wound condition, with wireless transmission of readings to a smartphone or similar device.",
+                        "Design was driven by user-centric principles throughout, aimed at real-world adoption and improved patient outcomes."
                     ],
                     stack: ["HEALTH TECH", "SENSOR ELECTRONICS", "MCU", "WIRELESS DATA"], image: "public/assets/medibuddy.jpg" 
                 },
                 {
                     id: 7, category: "project", title: "High Altitude Solar Balloon - HALO",
                     tags: ["Green Energy", "NPD", "Engineering Design", "Problem Solving"],
-                    desc: "Conceptualized a modified solar panel to be deployed in the troposphere for higher absorption rate and longer operational time (up to 20hrs/day), drastically increasing efficiency and output.",
+                    desc: "Conceptualized a balloon-deployed solar platform that operates above most atmospheric attenuation and weather, targeting ~20 hours of direct sunlight a day versus 5–6 for a typical ground panel.",
                     details: [
-                        "Conceptualized a Modified Solar Panel that has more operational time and provides a higher absorption rate and surface area.",
-                        "The system stays high up in the troposphere where the sunlight is direct and more radiant.",
-                        "HALO will be exposed to sunlight for about 20hrs a day and thus increasing efficiency and output."
+                        "Ground-based and even standard elevated solar installations are limited by atmospheric attenuation, weather, day length, and terrestrial shading - a platform operating in the troposphere sits above most of that, receiving direct, unobstructed sunlight for far more of the day.",
+                        "Conceptualized a modified solar panel platform for tropospheric deployment via balloon, engineered around a larger effective absorption surface area and extended daily operational exposure.",
+                        "Target: roughly 20 hours of direct sunlight exposure per day, compared to about 5–6 hours for a typical ground-mounted panel depending on location and season.",
+                        "Near-continuous direct sunlight combined with reduced atmospheric attenuation from altitude was the core mechanism behind the targeted efficiency and output gains."
                     ],
                     stack: ["SOLAR ENERGY", "NPD", "ENGINEERING DESIGN", "TROPOSPHERE"], image: "public/assets/halo.jpg"
+                },
+                {
+                    id: 8, category: "project", title: "Image-RW: Handheld Multi-Spectral NDT Inspection Enclosure",
+                    tags: ["NDT Inspection", "5-Axis CNC", "Thermal Imaging", "VR Streaming"],
+                    desc: "Engineered a sub-1.5\" wide, IP67-rated dual-camera enclosure for a pole-mounted inspection tool, later cutting form factor by 30% and weight by 40% while holding 0.1mm tolerances.",
+                    details: [
+                        "A pole-mounted inspection tool pairs an optical and thermal camera to let an operator inspect structurally inaccessible spaces - pipe interiors, wall cavities, crawlspaces - with both feeds streamed live to a VR headset. The enclosure had to stay under 1.5in wide, hit an IP67 seal rating, and be easy to assemble in the field.",
+                        "Split the enclosure into a modular assembly (Enclosure Box, Top Cover, 3D-printed Camera Bracket, machined Heat Sink, Cable Holders) mating along a custom 3D-printed gasket to hit IP67 despite the multi-part construction, with every curved feature designed at a 5mm radius and every hole standardized to M4 to minimize CNC tool changes.",
+                        "Thread-milled the PG13.5 cable gland directly into the enclosure wall on a Langmuir ThreadMill rather than using a backing nut, calculating the thread pitch and pitch-diameter offset from the gland spec to remove an assembly step and an internal clearance requirement.",
+                        "Machined all metal components (Al 6061, held to 0.1mm tolerance) on a Haas 5-axis in a single setup using a custom dovetail fixture, since splitting the operation across setups would have introduced repositioning error exactly where the tolerances couldn't absorb it.",
+                        "Later revisited the design to cut the enclosure's form factor by roughly 30% and weight by roughly 40%, and built a custom thermal-optical calibration target that computes both cameras' intrinsic and extrinsic parameters in a single pass for low-latency VR streaming."
+                    ],
+                    stack: ["AL 6061", "5-AXIS CNC", "IP67 SEALING", "THERMAL/OPTICAL"], image: "public/assets/image-rw.jpg"
+                },
+                {
+                    id: 9, category: "project", title: "Nexterity - Moon Wrench (Autonomous Pipeline Flange Bolting System)",
+                    tags: ["Robotics", "FEA", "CNC Machining", "Structural Design"],
+                    desc: "Designed the clamping and socket subsystem that lets a robot absorb 380 Nm of instantaneous reaction torque across 8 bolts without spinning off the pipe - validated to a 10,000-cycle fatigue life.",
+                    details: [
+                        "Unbolting high-torque flange joints traditionally requires a technician bracing an impact gun by hand; for a robot, the 380 Nm of instantaneous reaction torque from each bolt has to be absorbed structurally, or the robot spins itself off the pipe instead of turning the bolt - making this as much a structural problem as a robotics one.",
+                        "Owned the clamping and hex-nut backing mechanism, including the socket adapter - the single highest-stress part in the assembly - designing it with rotational symmetry around the drive interface to distribute shear evenly and reinforced fillets at internal corners to reduce stress-riser failure points under impact loading.",
+                        "Ran iterative static stress simulations in Fusion 360 (simulate → identify hotspot → modify geometry → re-simulate), bringing peak stress down to 265 MPa under the full 380 Nm load in Al 7075 (500 MPa yield) for a 1.89 factor of safety, and separately validated a 10,000-cycle fatigue life.",
+                        "Designed the supporting lever (60° range of motion to align the impact socket with each hex nut in sequence) and the stub/hinge assembly that diffuses reaction force into the base plate structure.",
+                        "Machined the socket adapters via live tooling on a Haas lathe in a single setup to keep drive geometry and outer profile concentric, and designed every part around a ⅜\" endmill so contour radii could be produced in the fewest tool changes while holding ~0.01\" tolerances for tool-free assembly."
+                    ],
+                    stack: ["AL 7075", "FUSION 360 FEA", "CAM / LATHE", "STRUCTURAL DESIGN"], image: "public/assets/nexterity.jpg"
+                },
+                {
+                    id: 10, category: "project", title: "Surface Profilometer",
+                    tags: ["Optical Metrology", "Sensor Fusion", "Real-Time Algorithms"],
+                    desc: "Architected a handheld optical system combining a line laser, global-shutter camera, and Time-of-Flight sensor to measure sub-millimeter surface geometry without touching the part.",
+                    details: [
+                        "Inspecting fine surface geometry traditionally means either physical contact (risking damage to a finished surface) or a fixed benchtop rig (unusable on an installed part). A handheld tool has to solve for a standoff distance and tilt that both drift continuously with the operator's hand.",
+                        "Designed the complete system architecture and measurement model: a 45° line laser for triangulation, a Time-of-Flight sensor tracking live hand-to-surface standoff, and a monochrome global-shutter camera with a narrow bandpass filter to reject ambient shop lighting and glare.",
+                        "Solved wrist tilt in real time by sampling flat, undisturbed reference material on both sides of the feature of interest every frame and computing the tilt angle directly from their relative pixel offset, then leveling the frame in software with a 2D rotation matrix before any height math runs.",
+                        "Derived the height calculation from first principles - projecting a surface point's laser-line displacement through the camera's pinhole geometry at its true depth (standoff minus height) - rather than assuming a fixed benchtop baseline, so the full triangulation geometry re-solves every frame from just the live ToF reading and pixel shift.",
+                        "Used a linearized form of that height equation in the real-time control loop for speed (justified since surface heights of interest are always small relative to standoff), with the worst-case error bound established analytically, and built a rigid internal optical chassis that keeps the laser/camera/ToF alignment fixed against housing flex and thermal expansion."
+                    ],
+                    stack: ["LASER TRIANGULATION", "TIME-OF-FLIGHT", "REAL-TIME ALGORITHMS", "OPTICAL DESIGN"], image: "public/assets/surface-profilometer.jpg"
+                },
+                {
+                    id: 11, category: "project", title: "Dual-Girder Line Profiling Bridge Monitoring System",
+                    tags: ["Structural Health Monitoring", "IMU Array", "Python", "Signal Processing"],
+                    desc: "Designed an 8-IMU sensor array and deflection model for real-time monitoring of an asymmetric two-span bridge, reconstructing parabolic girder sag and hinge torsion rather than a flattened straight-line fit.",
+                    details: [
+                        "Bridge girders deflect under load in a parabolic curve, not a straight line - a naive monitoring approach fitting one rigid 3D plane through sensor points draws a straight chord between supports and systematically underestimates the mid-span sag structural engineers actually care about.",
+                        "Designed the sensor layout around 8 IMUs in left/right pairs at four longitudinal stations (each abutment, and either side of the hinge), treating the left and right deck lines as two independent 2D profiles rather than one flattened 3D surface - preserving each girder's natural bending shape and capturing asymmetrical loading (e.g. one heavy vehicle biasing one lane) directly instead of averaging it away.",
+                        "Derived a tare-offset correction step to zero out each sensor's static installation bias, then derived the per-span parabolic deflection integration from each span's end-point pitch readings, stitching Span A's endpoint displacement into Span B's integration so the two profiles connect correctly across the shared hinge pin.",
+                        "From the two per-girder profiles, derived four structural health metrics: vertical sag depth, dynamic deck torsion angle, hinge rotational discontinuity, and a differential hinge kink-angle used as a proxy for asymmetrical torque on the mechanical hinge pin and long-term fatigue risk.",
+                        "Implemented the model as a hardware-agnostic Python module (static tare-setting + per-frame processing), and separately specified the full hardware integration for the VectorNav VN-200T IMU - wiring pinout, RS-422 serial configuration, 50Hz output rate with dynamic vibration rejection, thermal warm-up procedure, and a $VNYPR sentence parser across all 8 sensors."
+                    ],
+                    stack: ["IMU / AHRS", "PYTHON", "RS-422", "STRUCTURAL MONITORING"], image: "public/assets/bridge-monitoring.jpg"
                 }
             ]
         };
+
+        // Splits a comma-separated skill string into items, ignoring commas inside parentheses
+        function splitSkillItems(str) {
+            const items = [];
+            let depth = 0, current = '';
+            for (const ch of str) {
+                if (ch === '(') depth++;
+                if (ch === ')') depth--;
+                if (ch === ',' && depth === 0) {
+                    items.push(current.trim());
+                    current = '';
+                } else {
+                    current += ch;
+                }
+            }
+            if (current.trim()) items.push(current.trim());
+            return items;
+        }
+
+        // Bolds the core keyword/term of a skill item, leaving any parenthetical detail unbolded
+        function formatSkillItem(item) {
+            const parenIndex = item.indexOf('(');
+            if (parenIndex > 0) {
+                const keyword = item.slice(0, parenIndex).trim();
+                const rest = item.slice(parenIndex);
+                return `<strong class="text-white font-bold">${keyword}</strong> <span class="text-slate-400">${rest}</span>`;
+            }
+            return `<strong class="text-white font-bold">${item}</strong>`;
+        }
 
         function render() {
             // Skills
             const skillsContainer = document.getElementById('skills-list');
             DATA.skills.forEach(s => {
+                const bullets = splitSkillItems(s.items)
+                    .map(item => `<li class="mb-1.5 pl-3.5 relative before:content-['▹'] before:absolute before:left-0 before:text-blue-500">${formatSkillItem(item)}</li>`)
+                    .join('');
                 skillsContainer.innerHTML += `
                 <div>
-                    <h4 class="text-blue-400 font-bold text-sm mb-2 font-mono uppercase">${s.cat}</h4>
-                    <p class="text-sm font-mono leading-relaxed text-slate-300">${s.items}</p>
+                    <h4 class="text-blue-400 font-bold text-sm mb-3 font-mono uppercase">${s.cat}</h4>
+                    <ul class="text-sm font-mono leading-relaxed text-slate-300 list-none">${bullets}</ul>
                 </div>`;
             });
 
             // Experience
             const expContainer = document.getElementById('experience-container');
             DATA.experience.forEach(e => {
-                const itemData = JSON.stringify(e).replace(/'/g, "&#39;");
-                expContainer.innerHTML += `
-                <div class="relative group cursor-pointer" onclick='openModal(${itemData})'>
-                    <span class="absolute -left-[41px] top-1 h-5 w-5 rounded-full border-4 border-white bg-blue-600 group-hover:bg-blue-800 transition-colors"></span>
+                const companyLabel = e.companyUrl
+                    ? `<a href="${e.companyUrl}" target="_blank" rel="noopener" class="hover:text-blue-600 underline decoration-dotted transition-colors">${e.company}</a>`
+                    : e.company;
+
+                let entryHTML = `
+                <div class="relative">
+                    <span class="absolute -left-[41px] top-1 h-5 w-5 rounded-full border-4 border-white bg-blue-600"></span>
                     <div class="mb-1 flex items-center gap-3">
-                        <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-700 transition-colors">${e.role}</h3>
+                        <h3 class="font-bold text-lg text-slate-900">${e.role}</h3>
                         <span class="text-xs font-mono py-0.5 px-2 bg-slate-100 rounded text-slate-600">${e.period}</span>
                     </div>
-                    <div class="text-sm font-semibold text-slate-600 mb-3">${e.company} | ${e.location}</div>
+                    <div class="text-sm font-semibold text-slate-600 mb-3">${companyLabel} | ${e.location}</div>
                     <p class="text-slate-600 text-sm leading-relaxed max-w-2xl">${e.desc}</p>
-                    <span class="inline-flex items-center text-xs font-semibold text-blue-600 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                        VIEW LOG <i data-lucide="arrow-right" class="w-3 h-3 ml-1"></i>
-                    </span>
                 </div>`;
+
+                if (e.cards) {
+                    const gridCols = e.cards.length >= 3 ? 'md:grid-cols-2 lg:grid-cols-3' : e.cards.length === 2 ? 'md:grid-cols-2' : 'grid-cols-1';
+                    const cardsHTML = e.cards.map(card => `
+                        <div class="bg-white border border-slate-200 rounded-xl p-5 hover:border-blue-400 hover:shadow-md transition-all">
+                            <h4 class="text-xs font-mono font-bold uppercase tracking-widest text-blue-600 mb-4">${card.title}</h4>
+                            <ul class="space-y-3.5 text-sm text-slate-600 leading-relaxed">
+                                ${card.bullets.map(b => `
+                                <li class="relative pl-4">
+                                    <span class="absolute left-0 top-1.5 h-1.5 w-1.5 bg-blue-500 rounded-full"></span>
+                                    <strong class="text-slate-900">${b.keyword}:</strong> ${b.text}
+                                </li>`).join('')}
+                            </ul>
+                        </div>`).join('');
+
+                    entryHTML += `
+                    <div class="mt-6 grid ${gridCols} gap-5">
+                        ${cardsHTML}
+                    </div>`;
+                }
+
+                expContainer.innerHTML += entryHTML;
             });
 
             // Education
@@ -558,12 +725,16 @@
                         ${edu.courses.map(c => `<span class="bg-blue-50 text-blue-700 text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wider">${c}</span>`).join('')}
                     </div>` : '';
 
+                const descriptionHTML = edu.description ? `
+                    <p class="mt-4 text-sm text-slate-600 leading-relaxed max-w-2xl">${edu.description}</p>` : '';
+
                 eduContainer.innerHTML += `
                 <div class="border-l-2 border-blue-100 pl-4 py-2 hover:border-blue-500 transition-colors">
                     <h3 class="font-bold text-lg text-slate-900">${edu.school}</h3>
                     <p class="text-sm text-blue-600 font-mono mb-1 font-bold">${edu.degree}</p>
                     <p class="text-xs text-slate-500 uppercase tracking-wider mb-2">${edu.period} | ${edu.location}</p>
                     ${coursesHTML}
+                    ${descriptionHTML}
                 </div>`;
             });
 
@@ -687,5 +858,3 @@
     </script>
 </body>
 </html>
-
-
