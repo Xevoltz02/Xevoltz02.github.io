@@ -335,33 +335,49 @@
         // Update a path in ONE place and it applies everywhere it's used.
         // ============================================================
         const ASSETS = {
-            // Site-wide
-            resumePdf: "public/assets/Raghav_Kumar_Agarwal_Resume_2026.pdf",
-            profilePhoto: "public/assets/profile.jpg",
+    resumePdf: "public/assets/Raghav_Kumar_Agarwal_Resume_2026.pdf",
+    profilePhoto: "public/assets/profile.jpg",
 
-            // Experience company logos
-            logos: {
-                aRoboticsCompany: "",                      // no logo on file yet
-                tataPowerSolar: "public/assets/tata.jpg",
-                olaElectric: "public/assets/ola.jpg",
-                asmeVIT: ""                                 // no logo on file yet
-            },
+    logos: {
+        aRoboticsCompany: "",
+        tataPowerSolar: "public/assets/tata.jpg",
+        olaElectric: "public/assets/ola.jpg",
+        asmeVIT: ""
+    },
 
-            // Project card images
-            projects: {
-                droneRacing: "public/assets/drone.jpg.png",
-                gpsImuFusion: "public/assets/Nuance.jpg",
-                solarCleaningBot: "public/assets/solar.jpg",
-                piezoelectricDecoupler: "public/assets/piezo.jpg",
-                uavPropulsion: "public/assets/uav_propulsion.jpg",
-                mediBuddy: "public/assets/medibuddy.jpg",
-                halo: "public/assets/halo.jpg",
-                imageRW: "public/assets/image-rw.jpg",
-                nexterity: "public/assets/nexterity.jpg",
-                surfaceProfilometer: "public/assets/surface-profilometer.jpg",
-                bridgeMonitoring: "public/assets/bridge-monitoring.jpg"
-            }
-        };
+    // Card cover images (file names match your uploads exactly - case sensitive!)
+    projects: {
+        droneRacing: "public/assets/drone.jpg.png",
+        gpsImuFusion: "public/assets/Nuance.jpg",
+        solarCleaningBot: "public/assets/solar.jpg",
+        piezoelectricDecoupler: "public/assets/piezo.jpg",
+        uavPropulsion: "public/assets/uav_propulsion.jpg",
+        mediBuddy: "public/assets/medibuddy.jpg",
+        halo: "public/assets/halo.jpg",
+        imageRW: "public/assets/Image-RW.jpeg",
+        nexterity: "public/assets/nexterity.jpeg",
+        surfaceProfilometer: "public/assets/Handheld_Laser_Scanner_Inspection_Device.png",
+        bridgeMonitoring: "public/assets/Bridge_Monitoring_System.png"
+    },
+
+    // Extra photos shown in the modal gallery (cover image is already shown, so not repeated)
+    gallery: {
+        imageRW: [
+            { src: "public/assets/imager_vest.jpg", caption: "Pole-mounted inspection rig with operator backpack" }
+        ],
+        nexterity: [
+            { src: "public/assets/MoonWrench.jpeg", caption: "8-socket clamping ring with impact sockets" },
+            { src: "public/assets/moonWrench_load_bearing_socket_Adapter.jpeg", caption: "Al 7075 load-bearing socket adapter (live-tooling lathe)" },
+            { src: "public/assets/moonWrench_mounted.jpeg", caption: "Moon Wrench mounted on a pipe flange" }
+        ]
+    },
+
+    videos: {
+        imageRW: [
+            { src: "public/assets/Haas_5axis.mp4", caption: "Haas 5-axis machining of the enclosure in a single setup" }
+        ]
+    }
+};
 
         const DATA = {
             skills: [
@@ -612,31 +628,36 @@
                     stack: ["SOLAR ENERGY", "NPD", "ENGINEERING DESIGN", "TROPOSPHERE"], image: ASSETS.projects.halo
                 },
                 {
-                    id: 8, category: "project", title: "Image-RW: Handheld Multi-Spectral NDT Inspection Enclosure",
-                    tags: ["NDT Inspection", "5-Axis CNC", "Thermal Imaging", "VR Streaming"],
-                    desc: "Engineered a sub-1.5\" wide, IP67-rated dual-camera enclosure for a pole-mounted inspection tool, later cutting form factor by 30% and weight by 40% while holding 0.1mm tolerances.",
-                    details: [
-                        "A pole-mounted inspection tool pairs an optical and thermal camera to let an operator inspect structurally inaccessible spaces - pipe interiors, wall cavities, crawlspaces - with both feeds streamed live to a VR headset. The enclosure had to stay under 1.5in wide, hit an IP67 seal rating, and be easy to assemble in the field.",
-                        "Split the enclosure into a modular assembly (Enclosure Box, Top Cover, 3D-printed Camera Bracket, machined Heat Sink, Cable Holders) mating along a custom 3D-printed gasket to hit IP67 despite the multi-part construction, with every curved feature designed at a 5mm radius and every hole standardized to M4 to minimize CNC tool changes.",
-                        "Thread-milled the PG13.5 cable gland directly into the enclosure wall on a Langmuir ThreadMill rather than using a backing nut, calculating the thread pitch and pitch-diameter offset from the gland spec to remove an assembly step and an internal clearance requirement.",
-                        "Machined all metal components (Al 6061, held to 0.1mm tolerance) on a Haas 5-axis in a single setup using a custom dovetail fixture, since splitting the operation across setups would have introduced repositioning error exactly where the tolerances couldn't absorb it.",
-                        "Later revisited the design to cut the enclosure's form factor by roughly 30% and weight by roughly 40%, and built a custom thermal-optical calibration target that computes both cameras' intrinsic and extrinsic parameters in a single pass for low-latency VR streaming."
-                    ],
-                    stack: ["AL 6061", "5-AXIS CNC", "IP67 SEALING", "THERMAL/OPTICAL"], image: ASSETS.projects.imageRW
-                },
+    id: 8, category: "project", title: "Image-RW: Handheld Multi-Spectral NDT Inspection Enclosure",
+    tags: ["NDT Inspection", "5-Axis CNC", "Thermal Imaging", "VR Streaming"],
+    desc: "Engineered a sub-1.5\" wide, IP67-rated dual-camera enclosure for a pole-mounted inspection tool, later cutting form factor by 30% and weight by 40% while holding 0.1mm tolerances.",
+    details: [
+        "A pole-mounted inspection tool pairs an optical and thermal camera to let an operator inspect structurally inaccessible spaces - pipe interiors, wall cavities, crawlspaces - with both feeds streamed live to a VR headset. The enclosure had to stay under 1.5in wide, hit an IP67 seal rating, and be easy to assemble in the field.",
+        "Split the enclosure into a modular assembly (Enclosure Box, Top Cover, 3D-printed Camera Bracket, machined Heat Sink, Cable Holders) mating along a custom 3D-printed gasket to hit IP67 despite the multi-part construction, with every curved feature designed at a 5mm radius and every hole standardized to M4 to minimize CNC tool changes.",
+        "Thread-milled the PG13.5 cable gland directly into the enclosure wall on a Langmuir ThreadMill rather than using a backing nut, calculating the thread pitch and pitch-diameter offset from the gland spec to remove an assembly step and an internal clearance requirement.",
+        "Machined all metal components (Al 6061, held to 0.1mm tolerance) on a Haas 5-axis in a single setup using a custom dovetail fixture, since splitting the operation across setups would have introduced repositioning error exactly where the tolerances couldn't absorb it.",
+        "Later revisited the design to cut the enclosure's form factor by roughly 30% and weight by roughly 40%, and built a custom thermal-optical calibration target that computes both cameras' intrinsic and extrinsic parameters in a single pass for low-latency VR streaming."
+    ],
+    stack: ["AL 6061", "5-AXIS CNC", "IP67 SEALING", "THERMAL/OPTICAL"],
+    image: ASSETS.projects.imageRW,
+    gallery: ASSETS.gallery.imageRW,
+    videos: ASSETS.videos.imageRW
+},
                 {
-                    id: 9, category: "project", title: "Nexterity - Moon Wrench (Autonomous Pipeline Flange Bolting System)",
-                    tags: ["Robotics", "FEA", "CNC Machining", "Structural Design"],
-                    desc: "Designed the clamping and socket subsystem that lets a robot absorb 380 Nm of instantaneous reaction torque across 8 bolts without spinning off the pipe - validated to a 10,000-cycle fatigue life.",
-                    details: [
-                        "Unbolting high-torque flange joints traditionally requires a technician bracing an impact gun by hand; for a robot, the 380 Nm of instantaneous reaction torque from each bolt has to be absorbed structurally, or the robot spins itself off the pipe instead of turning the bolt - making this as much a structural problem as a robotics one.",
-                        "Owned the clamping and hex-nut backing mechanism, including the socket adapter - the single highest-stress part in the assembly - designing it with rotational symmetry around the drive interface to distribute shear evenly and reinforced fillets at internal corners to reduce stress-riser failure points under impact loading.",
-                        "Ran iterative static stress simulations in Fusion 360 (simulate → identify hotspot → modify geometry → re-simulate), bringing peak stress down to 265 MPa under the full 380 Nm load in Al 7075 (500 MPa yield) for a 1.89 factor of safety, and separately validated a 10,000-cycle fatigue life.",
-                        "Designed the supporting lever (60° range of motion to align the impact socket with each hex nut in sequence) and the stub/hinge assembly that diffuses reaction force into the base plate structure.",
-                        "Machined the socket adapters via live tooling on a Haas lathe in a single setup to keep drive geometry and outer profile concentric, and designed every part around a ⅜\" endmill so contour radii could be produced in the fewest tool changes while holding ~0.01\" tolerances for tool-free assembly."
-                    ],
-                    stack: ["AL 7075", "FUSION 360 FEA", "CAM / LATHE", "STRUCTURAL DESIGN"], image: ASSETS.projects.nexterity
-                },
+    id: 9, category: "project", title: "Nexterity - Moon Wrench (Autonomous Pipeline Flange Bolting System)",
+    tags: ["Robotics", "FEA", "CNC Machining", "Structural Design"],
+    desc: "Designed the clamping and socket subsystem that lets a robot absorb 380 Nm of instantaneous reaction torque across 8 bolts without spinning off the pipe - validated to a 10,000-cycle fatigue life.",
+    details: [
+        "Unbolting high-torque flange joints traditionally requires a technician bracing an impact gun by hand; for a robot, the 380 Nm of instantaneous reaction torque from each bolt has to be absorbed structurally, or the robot spins itself off the pipe instead of turning the bolt - making this as much a structural problem as a robotics one.",
+        "Owned the clamping and hex-nut backing mechanism, including the socket adapter - the single highest-stress part in the assembly - designing it with rotational symmetry around the drive interface to distribute shear evenly and reinforced fillets at internal corners to reduce stress-riser failure points under impact loading.",
+        "Ran iterative static stress simulations in Fusion 360 (simulate → identify hotspot → modify geometry → re-simulate), bringing peak stress down to 265 MPa under the full 380 Nm load in Al 7075 (500 MPa yield) for a 1.89 factor of safety, and separately validated a 10,000-cycle fatigue life.",
+        "Designed the supporting lever (60° range of motion to align the impact socket with each hex nut in sequence) and the stub/hinge assembly that diffuses reaction force into the base plate structure.",
+        "Machined the socket adapters via live tooling on a Haas lathe in a single setup to keep drive geometry and outer profile concentric, and designed every part around a ⅜\" endmill so contour radii could be produced in the fewest tool changes while holding ~0.01\" tolerances for tool-free assembly."
+    ],
+    stack: ["AL 7075", "FUSION 360 FEA", "CAM / LATHE", "STRUCTURAL DESIGN"],
+    image: ASSETS.projects.nexterity,
+    gallery: ASSETS.gallery.nexterity
+},
                 {
                     id: 10, category: "project", title: "Surface Profilometer",
                     tags: ["Optical Metrology", "Sensor Fusion", "Real-Time Algorithms"],
@@ -819,73 +840,99 @@
         
         // --- MODAL LOGIC ---
         function openModal(item) {
-            const modal = document.getElementById('project-modal');
-            const isExp = item.category === 'experience';
-            
-            document.getElementById('modal-title').innerText = item.title || item.role;
-            document.getElementById('modal-type').innerText = isExp ? "PERSONNEL LOG | " + item.role : "PROJECT DETAIL";
-            document.getElementById('modal-subtitle').innerText = isExp ? `${item.company} // ${item.location} (${item.period})` : "";
-            
-            const body = document.getElementById('modal-body');
-            
-            const detailList = item.details.map(detail => `
-                <li class="mb-3 text-slate-700 leading-relaxed relative pl-4">
-                    <span class="absolute left-0 top-1 h-2 w-2 bg-blue-500 rounded-full"></span>
-                    ${detail}
-                </li>`).join('');
+    const modal = document.getElementById('project-modal');
+    const isExp = item.category === 'experience';
 
-            let imageHTML = '';
+    document.getElementById('modal-title').innerText = item.title || item.role;
+    document.getElementById('modal-type').innerText = isExp ? "PERSONNEL LOG | " + item.role : "PROJECT DETAIL";
+    document.getElementById('modal-subtitle').innerText = isExp ? `${item.company} // ${item.location} (${item.period})` : "";
 
-            if (isExp) {
-                if (item.logo) {
-                    imageHTML = `<div class="w-full h-full flex items-center justify-center bg-white rounded-lg border border-slate-200 p-8">
-                                    <img src="${item.logo}" alt="${item.company}" class="max-w-full max-h-full object-contain">
-                                 </div>`;
-                } else {
-                    imageHTML = `<div class="w-full h-full flex flex-col items-center justify-center bg-slate-50 rounded-lg border-2 border-dashed border-slate-200 text-slate-400">
-                                    <i data-lucide="building-2" class="w-12 h-12 mb-2 opacity-50"></i>
-                                    <span class="text-[10px] font-mono uppercase tracking-widest">Workplace</span>
-                                 </div>`;
-                }
-            } else {
-                imageHTML = `<img src="${item.image}" class="w-full h-full object-cover rounded-lg border border-slate-200" alt="${item.title}">`;
-            }
+    const body = document.getElementById('modal-body');
 
-            body.innerHTML = `
-                <div class="grid md:grid-cols-3 gap-8 mb-6">
-                    <div class="md:col-span-2 space-y-4">
-                        <h3 class="text-blue-700 text-base uppercase tracking-wider font-bold border-l-4 border-blue-500 pl-3 mb-4">
-                            ${isExp ? "Key Accomplishments" : "Problem & Solution"}
-                        </h3>
-                        <ul class="list-none space-y-4">
-                            ${detailList}
-                        </ul>
-                    </div>
-                    
-                    <div class="space-y-6">
-                        <div>
-                            <h3 class="text-slate-500 text-xs uppercase tracking-widest font-bold mb-2">Tech Stack</h3>
-                            <div class="flex flex-wrap gap-2">
-                                ${item.stack.map(s => `<span class="bg-slate-200 text-slate-700 px-2 py-1 text-xs font-mono rounded">${s}</span>`).join('')}
-                            </div>
-                        </div>
-                        <div class="h-48 flex items-center justify-center">
-                            ${imageHTML}
-                        </div>
+    const detailList = item.details.map(detail => `
+        <li class="mb-3 text-slate-700 leading-relaxed relative pl-4">
+            <span class="absolute left-0 top-1 h-2 w-2 bg-blue-500 rounded-full"></span>
+            ${detail}
+        </li>`).join('');
+
+    let imageHTML = '';
+    if (isExp) {
+        imageHTML = item.logo
+            ? `<div class="w-full h-full flex items-center justify-center bg-white rounded-lg border border-slate-200 p-8">
+                   <img src="${item.logo}" alt="${item.company}" class="max-w-full max-h-full object-contain">
+               </div>`
+            : `<div class="w-full h-full flex flex-col items-center justify-center bg-slate-50 rounded-lg border-2 border-dashed border-slate-200 text-slate-400">
+                   <i data-lucide="building-2" class="w-12 h-12 mb-2 opacity-50"></i>
+                   <span class="text-[10px] font-mono uppercase tracking-widest">Workplace</span>
+               </div>`;
+    } else {
+        imageHTML = `<img src="${item.image}" class="w-full h-full object-cover rounded-lg border border-slate-200" alt="${item.title}">`;
+    }
+
+    // Gallery photos (click to open full size in a new tab)
+    const galleryHTML = item.gallery && item.gallery.length ? `
+        <div class="mt-8 pt-4 border-t border-slate-200">
+            <h3 class="text-slate-500 text-xs uppercase tracking-widest font-bold mb-3">Gallery</h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                ${item.gallery.map(g => `
+                    <figure>
+                        <a href="${g.src}" target="_blank" rel="noopener">
+                            <img src="${g.src}" alt="${g.caption || item.title}" loading="lazy"
+                                 class="h-40 w-full object-cover rounded-lg border border-slate-200 hover:opacity-80 transition">
+                        </a>
+                        ${g.caption ? `<figcaption class="mt-1 text-[11px] text-slate-500 leading-snug">${g.caption}</figcaption>` : ''}
+                    </figure>`).join('')}
+            </div>
+        </div>` : '';
+
+    // Videos
+    const videoHTML = item.videos && item.videos.length ? `
+        <div class="mt-8 pt-4 border-t border-slate-200">
+            <h3 class="text-slate-500 text-xs uppercase tracking-widest font-bold mb-3">Video</h3>
+            <div class="grid gap-4">
+                ${item.videos.map(v => `
+                    <figure>
+                        <video src="${v.src}" controls muted loop playsinline preload="metadata"
+                               class="w-full max-h-96 rounded-lg border border-slate-200 bg-black"></video>
+                        ${v.caption ? `<figcaption class="mt-1 text-[11px] text-slate-500">${v.caption}</figcaption>` : ''}
+                    </figure>`).join('')}
+            </div>
+        </div>` : '';
+
+    body.innerHTML = `
+        <div class="grid md:grid-cols-3 gap-8 mb-6">
+            <div class="md:col-span-2 space-y-4">
+                <h3 class="text-blue-700 text-base uppercase tracking-wider font-bold border-l-4 border-blue-500 pl-3 mb-4">
+                    ${isExp ? "Key Accomplishments" : "Problem & Solution"}
+                </h3>
+                <ul class="list-none space-y-4">${detailList}</ul>
+            </div>
+
+            <div class="space-y-6">
+                <div>
+                    <h3 class="text-slate-500 text-xs uppercase tracking-widest font-bold mb-2">Tech Stack</h3>
+                    <div class="flex flex-wrap gap-2">
+                        ${item.stack.map(s => `<span class="bg-slate-200 text-slate-700 px-2 py-1 text-xs font-mono rounded">${s}</span>`).join('')}
                     </div>
                 </div>
-                
-                ${!isExp ? `
-                <div class="mt-8 pt-4 border-t border-slate-200 flex justify-end">
-                    <a href="https://github.com/your-github-username" target="_blank" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold uppercase text-xs tracking-widest rounded transition-colors">
-                        View Code on GitHub <i data-lucide="github" class="w-4 h-4 ml-2 inline-block"></i>
-                    </a>
-                </div>` : ''}
-            `;
-            
-            modal.classList.remove('hidden');
-            lucide.createIcons();
-        }
+                <div class="h-48 flex items-center justify-center">${imageHTML}</div>
+            </div>
+        </div>
+
+        ${galleryHTML}
+        ${videoHTML}
+
+        ${!isExp ? `
+        <div class="mt-8 pt-4 border-t border-slate-200 flex justify-end">
+            <a href="https://github.com/your-github-username" target="_blank" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold uppercase text-xs tracking-widest rounded transition-colors">
+                View Code on GitHub <i data-lucide="github" class="w-4 h-4 ml-2 inline-block"></i>
+            </a>
+        </div>` : ''}
+    `;
+
+    modal.classList.remove('hidden');
+    lucide.createIcons();
+}
 
         function closeModal() {
             document.getElementById('project-modal').classList.add('hidden');
