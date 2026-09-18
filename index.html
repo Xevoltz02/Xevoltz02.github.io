@@ -97,7 +97,7 @@
                 <a href="#projects" class="hover:text-blue-600 transition-colors">PROJECTS</a>
                 <a href="#contact" class="hover:text-blue-600 transition-colors">CONTACT</a>
             </div>
-            <a href="public/assets/Raghav_Kumar_Agarwal_Resume_2026.pdf" target="_blank" class="px-4 py-2 bg-slate-900 text-white text-xs font-bold uppercase tracking-widest rounded hover:bg-blue-600 transition-colors">
+            <a id="resume-link" href="public/assets/Raghav_Kumar_Agarwal_Resume_2026.pdf" target="_blank" class="px-4 py-2 bg-slate-900 text-white text-xs font-bold uppercase tracking-widest rounded hover:bg-blue-600 transition-colors">
                 Download Resume
             </a>
         </div>
@@ -120,7 +120,7 @@
                 </p>
 
                 <div class="text-base text-slate-600 leading-relaxed max-w-xl space-y-4">
-                    <p>Robotics shouldn't end at the code, and mechanical design shouldn't stop at CAD. I love bringing the two together, there's nothing quite like watching an abstract mathematical model spin up on physical hardware and conquer the real world.</p>
+                    <p>Robotics shouldn't end at the code, and mechanical design shouldn't stop at CAD. I love bringing the two together — there's nothing quite like watching an abstract mathematical model spin up on physical hardware and conquer the real world.</p>
                     <p>Pure software is fascinating, but it really comes alive when paired with the physics of motors, linkages, and structural dynamics. I build end-to-end: first-principles autonomy paired with hands-on mechanical craft, so every system runs seamlessly.</p>
                 </div>
 
@@ -154,7 +154,7 @@
 
                 <div class="relative max-w-sm mx-auto">
                     <div class="relative aspect-square bg-slate-200 rounded-2xl overflow-hidden border-4 border-white shadow-2xl">
-                        <img src="public/assets/profile.jpg" alt="Raghav Agarwal" class="w-full h-full object-cover">
+                        <img id="profile-photo" src="public/assets/profile.jpg" alt="Raghav Agarwal" class="w-full h-full object-cover">
                         <div class="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md p-3 border-t border-slate-200">
                             <div class="flex justify-between items-center font-mono text-[10px]">
                                 <span class="text-slate-500">EMAIL</span>
@@ -330,6 +330,39 @@
     </div>
 
     <script>
+        // ============================================================
+        // ASSET PATHS — all image/file paths for the site live here.
+        // Update a path in ONE place and it applies everywhere it's used.
+        // ============================================================
+        const ASSETS = {
+            // Site-wide
+            resumePdf: "public/assets/Raghav_Kumar_Agarwal_Resume_2026.pdf",
+            profilePhoto: "public/assets/profile.jpg",
+
+            // Experience company logos
+            logos: {
+                aRoboticsCompany: "",                      // no logo on file yet
+                tataPowerSolar: "public/assets/tata.jpg",
+                olaElectric: "public/assets/ola.jpg",
+                asmeVIT: ""                                 // no logo on file yet
+            },
+
+            // Project card images
+            projects: {
+                droneRacing: "public/assets/drone.jpg.png",
+                gpsImuFusion: "public/assets/Nuance.jpg",
+                solarCleaningBot: "public/assets/solar.jpg",
+                piezoelectricDecoupler: "public/assets/piezo.jpg",
+                uavPropulsion: "public/assets/uav_propulsion.jpg",
+                mediBuddy: "public/assets/medibuddy.jpg",
+                halo: "public/assets/halo.jpg",
+                imageRW: "public/assets/image-rw.jpg",
+                nexterity: "public/assets/nexterity.jpg",
+                surfaceProfilometer: "public/assets/surface-profilometer.jpg",
+                bridgeMonitoring: "public/assets/bridge-monitoring.jpg"
+            }
+        };
+
         const DATA = {
             skills: [
                 { cat: "MECHANICAL DESIGN & SIMULATION", items: "Autodesk Fusion 360, SolidWorks (Certified: CSWA – Design Associate, Additive Manufacturing Associate), Finite Element Analysis (FEA – Static Stress, Deflection, 10,000-Cycle Fatigue Life), Thermal Simulation & Heat Dissipation, Geometric Dimensioning & Tolerancing (GD&T), Modular IP67 Enclosure Sealing, Fixed/Variable UAV Airframe & Propulsion Integration" },
@@ -354,7 +387,7 @@
                             bullets: [
                                 { keyword: "Structural Analysis & FEA", text: "Designed high-load reaction mechanisms and structural adapters to absorb 380 Nm instantaneous impact loads during autonomous bolt disassembly; iterated static FEA in Fusion 360 to mitigate stress concentrations, reducing peak stress to 265 MPa, achieving a 1.89 safety factor on Al 7075, and validating for 10,000-cycle fatigue life." },
                                 { keyword: "Precision CNC Machining & DFM/DFA", text: "Applied rigorous DFM principles by matching internal feature radii to 3/8\" tooling and standardizing fasteners, manufacturing components on Haas 5-axis mills and live-tooling lathes using single-setup dovetail fixturing; engineered an IP67-rated modular aluminum enclosure with thermal-paste heat sinking, reducing overall mass by 40% and package volume by 30%." },
-                                { keyword: "Fluids, Thermal & Pneumatic Systems", text: "Architected an integrated gas-conditioning and separation infrastructure utilizing a 5HP/175 PSI compressor, refrigerated dryers, and membrane separation to supply 99.95%-pure nitrogen; engineered a custom delivery nozzle maintaining a laminar shielding envelope (80 psi, 60 SCFM at 2ft standoff) to eliminate oxidation during robotic laser processing." }
+                                { keyword: "Fluids, Thermal & Pneumatic Systems", text: "Architected an integrated gas-conditioning and separation infrastructure utilizing a 5HP/175 PSI compressor, refrigerated dryers, and membrane separation to supply 99.95%-pure nitrogen; engineered a custom delivery nozzle maintaining a laminar shielding envelope (80 psi, 1 SCFM at 2ft standoff) to eliminate oxidation during robotic laser processing." }
                             ]
                         },
                         {
@@ -371,7 +404,7 @@
                     id: 101, category: "experience", company: "TATA Power Solar Systems Pvt. Ltd.",
                     role: "Research & Development Intern",
                     period: "Jan 2024 - July 2024", location: "India",
-                    logo: "public/assets/tata.jpg",
+                    logo: ASSETS.logos.tataPowerSolar,
                     desc: "Redesigned field enclosure thermal architecture and led QC/compliance for i-TAPS, Tata Power Solar's SIM-based, cloud-enabled data logger hardware powering their national NOC remote monitoring platform.",
                     stack: ["i-TAPS / 4G DATA ACQ.", "THERMAL SIM.", "ISO/IEC STDS", "QC"],
                     cards: [
@@ -396,7 +429,7 @@
                     id: 102, category: "experience", company: "OLA Electric Technologies Pvt. Ltd.",
                     role: "Project Intern",
                     period: "June 2022 - July 2022", location: "India",
-                    logo: "public/assets/ola.jpg",
+                    logo: ASSETS.logos.olaElectric,
                     desc: "Optimized General Assembly line sequencing and subassembly structure for the Ola S1 Pro electric scooter, improving production quality and manufacturing efficiency by 15% each.",
                     stack: ["PROCESS OPT.", "ASSEMBLY LINE", "MANUFACTURING"],
                     cards: [
@@ -499,7 +532,7 @@
                         "Enforced a terminal velocity model, start/end boundary conditions, and continued obstacle avoidance while minimizing control jerk (rate of change of acceleration) and total energy usage.",
                         "Result: a trajectory 68.6% shorter than the raw RRT output while staying strictly within actuator limits - shorter and actually flyable at competitive racing speed."
                     ],
-                    stack: ["PYTHON", "SCIPY", "RRT", "OPTIMIZATION"], image: "public/assets/drone.jpg.png"
+                    stack: ["PYTHON", "SCIPY", "RRT", "OPTIMIZATION"], image: ASSETS.projects.droneRacing
                 },
                 {
                     id: 2, category: "project", title: "GPS & IMU Sensor Fusion for Automotive Dead Reckoning",
@@ -512,7 +545,7 @@
                         "Compensated for accelerometer bias to derive accurate forward velocity, then fused gyroscope and corrected-magnetometer yaw for a reliable heading estimate.",
                         "Implemented an Extended Kalman Filter (EKF) to fuse GPS and IMU streams, maintaining accurate trajectory estimation through GPS-denied stretches and correcting accumulated drift whenever GPS became available again."
                     ],
-                    stack: ["ROS 2", "PYTHON", "EKF", "SLAM"], image: "public/assets/Nuance.jpg"
+                    stack: ["ROS 2", "PYTHON", "EKF", "SLAM"], image: ASSETS.projects.gpsImuFusion
                 },
                 {
                     id: 3, category: "project", title: "Autonomous Solar Cleaning Bot",
@@ -525,7 +558,7 @@
                         "Developed the closed-loop motor control algorithms and electrical wiring architecture, plus the communication protocols the robot uses for coordination.",
                         "Managed the full lifecycle from BOM selection through final mechatronic assembly, overseeing manufacturing of the core mobility components and enabling autonomous operation with real-time monitoring."
                     ],
-                    stack: ["OPENCV", "3D DESIGN", "MOBILITY", "CONTROL"], image: "public/assets/solar.jpg"
+                    stack: ["OPENCV", "3D DESIGN", "MOBILITY", "CONTROL"], image: ASSETS.projects.solarCleaningBot
                 },
                 {
                     id: 4, category: "project", title: "Piezoelectric Load-Decoupler",
@@ -538,7 +571,7 @@
                         "When the sensed load crosses the 50,000 N threshold, the system executes an automatic control action to disengage the coupling, converting a passive structural safety margin into an active, continuously-monitored one.",
                         "Reported outcome: a 100% improvement in safety and reliability versus the coupling's prior unprotected state."
                     ],
-                    stack: ["PIEZOELECTRIC", "MECHATRONICS", "NPD"], image: "public/assets/piezo.jpg"
+                    stack: ["PIEZOELECTRIC", "MECHATRONICS", "NPD"], image: ASSETS.projects.piezoelectricDecoupler
                 },
                 {
                     id: 5, category: "project", title: "Electronic Propulsion Systems for Micro UAVs",
@@ -551,7 +584,7 @@
                         "Built reliable command and telemetry links to the aircraft (signaling systems), and designed an autonomous payload drop mechanism with a mechanical release system and real-time triggering logic rather than manual/RC-triggered release.",
                         "This propulsion and electronics work directly supported the aircraft placing 3rd at AEROMANIA, ASME E-fest."
                     ],
-                    stack: ["AERODYNAMICS", "PROPULSION", "ELECTRICAL SAFETY", "SIGNALLING"], image: "public/assets/uav_propulsion.jpg"
+                    stack: ["AERODYNAMICS", "PROPULSION", "ELECTRICAL SAFETY", "SIGNALLING"], image: ASSETS.projects.uavPropulsion
                 },
                 {
                     id: 6, category: "project", title: "MediBuddy: pH-Sensitive Wound Care System",
@@ -564,7 +597,7 @@
                         "Incorporated a microcontroller unit (MCU) for real-time on-device data processing, enabling fast decision-making on wound condition, with wireless transmission of readings to a smartphone or similar device.",
                         "Design was driven by user-centric principles throughout, aimed at real-world adoption and improved patient outcomes."
                     ],
-                    stack: ["HEALTH TECH", "SENSOR ELECTRONICS", "MCU", "WIRELESS DATA"], image: "public/assets/medibuddy.jpg" 
+                    stack: ["HEALTH TECH", "SENSOR ELECTRONICS", "MCU", "WIRELESS DATA"], image: ASSETS.projects.mediBuddy 
                 },
                 {
                     id: 7, category: "project", title: "High Altitude Solar Balloon - HALO",
@@ -576,7 +609,7 @@
                         "Target: roughly 20 hours of direct sunlight exposure per day, compared to about 5–6 hours for a typical ground-mounted panel depending on location and season.",
                         "Near-continuous direct sunlight combined with reduced atmospheric attenuation from altitude was the core mechanism behind the targeted efficiency and output gains."
                     ],
-                    stack: ["SOLAR ENERGY", "NPD", "ENGINEERING DESIGN", "TROPOSPHERE"], image: "public/assets/halo.jpg"
+                    stack: ["SOLAR ENERGY", "NPD", "ENGINEERING DESIGN", "TROPOSPHERE"], image: ASSETS.projects.halo
                 },
                 {
                     id: 8, category: "project", title: "Image-RW: Handheld Multi-Spectral NDT Inspection Enclosure",
@@ -589,7 +622,7 @@
                         "Machined all metal components (Al 6061, held to 0.1mm tolerance) on a Haas 5-axis in a single setup using a custom dovetail fixture, since splitting the operation across setups would have introduced repositioning error exactly where the tolerances couldn't absorb it.",
                         "Later revisited the design to cut the enclosure's form factor by roughly 30% and weight by roughly 40%, and built a custom thermal-optical calibration target that computes both cameras' intrinsic and extrinsic parameters in a single pass for low-latency VR streaming."
                     ],
-                    stack: ["AL 6061", "5-AXIS CNC", "IP67 SEALING", "THERMAL/OPTICAL"], image: "public/assets/image-rw.jpg"
+                    stack: ["AL 6061", "5-AXIS CNC", "IP67 SEALING", "THERMAL/OPTICAL"], image: ASSETS.projects.imageRW
                 },
                 {
                     id: 9, category: "project", title: "Nexterity - Moon Wrench (Autonomous Pipeline Flange Bolting System)",
@@ -602,7 +635,7 @@
                         "Designed the supporting lever (60° range of motion to align the impact socket with each hex nut in sequence) and the stub/hinge assembly that diffuses reaction force into the base plate structure.",
                         "Machined the socket adapters via live tooling on a Haas lathe in a single setup to keep drive geometry and outer profile concentric, and designed every part around a ⅜\" endmill so contour radii could be produced in the fewest tool changes while holding ~0.01\" tolerances for tool-free assembly."
                     ],
-                    stack: ["AL 7075", "FUSION 360 FEA", "CAM / LATHE", "STRUCTURAL DESIGN"], image: "public/assets/nexterity.jpg"
+                    stack: ["AL 7075", "FUSION 360 FEA", "CAM / LATHE", "STRUCTURAL DESIGN"], image: ASSETS.projects.nexterity
                 },
                 {
                     id: 10, category: "project", title: "Surface Profilometer",
@@ -615,7 +648,7 @@
                         "Derived the height calculation from first principles - projecting a surface point's laser-line displacement through the camera's pinhole geometry at its true depth (standoff minus height) - rather than assuming a fixed benchtop baseline, so the full triangulation geometry re-solves every frame from just the live ToF reading and pixel shift.",
                         "Used a linearized form of that height equation in the real-time control loop for speed (justified since surface heights of interest are always small relative to standoff), with the worst-case error bound established analytically, and built a rigid internal optical chassis that keeps the laser/camera/ToF alignment fixed against housing flex and thermal expansion."
                     ],
-                    stack: ["LASER TRIANGULATION", "TIME-OF-FLIGHT", "REAL-TIME ALGORITHMS", "OPTICAL DESIGN"], image: "public/assets/surface-profilometer.jpg"
+                    stack: ["LASER TRIANGULATION", "TIME-OF-FLIGHT", "REAL-TIME ALGORITHMS", "OPTICAL DESIGN"], image: ASSETS.projects.surfaceProfilometer
                 },
                 {
                     id: 11, category: "project", title: "Dual-Girder Line Profiling Bridge Monitoring System",
@@ -628,7 +661,7 @@
                         "From the two per-girder profiles, derived four structural health metrics: vertical sag depth, dynamic deck torsion angle, hinge rotational discontinuity, and a differential hinge kink-angle used as a proxy for asymmetrical torque on the mechanical hinge pin and long-term fatigue risk.",
                         "Implemented the model as a hardware-agnostic Python module (static tare-setting + per-frame processing), and separately specified the full hardware integration for the VectorNav VN-200T IMU - wiring pinout, RS-422 serial configuration, 50Hz output rate with dynamic vibration rejection, thermal warm-up procedure, and a $VNYPR sentence parser across all 8 sensors."
                     ],
-                    stack: ["IMU / AHRS", "PYTHON", "RS-422", "STRUCTURAL MONITORING"], image: "public/assets/bridge-monitoring.jpg"
+                    stack: ["IMU / AHRS", "PYTHON", "RS-422", "STRUCTURAL MONITORING"], image: ASSETS.projects.bridgeMonitoring
                 }
             ]
         };
@@ -663,6 +696,10 @@
         }
 
         function render() {
+            // Site-wide assets (resume link, profile photo) driven from ASSETS config
+            document.getElementById('resume-link').href = ASSETS.resumePdf;
+            document.getElementById('profile-photo').src = ASSETS.profilePhoto;
+
             // Skills
             const skillsContainer = document.getElementById('skills-list');
             DATA.skills.forEach(s => {
