@@ -538,112 +538,6 @@
             ],
             projects: [
                 {
-                    id: 1, category: "project", title: "Autonomous Drone Racing",
-                    tags: ["Trajectory Opt.", "Path Planning", "SciPy", "Python"],
-                    desc: "Built a two-stage motion planner that turns a jagged, unflyable RRT path through aerial hoops into a smooth, actuator-feasible racing trajectory - cutting path length by 68.6%.",
-                    details: [
-                        "Raw RRT (Rapidly-exploring Random Tree) planning finds a collision-free route through 3D space, but its randomly sampled tree produces jagged, disconnected segments that a drone can't physically follow at racing speed without exceeding motor and control-surface limits.",
-                        "Stage 1: ran a 3D RRT search to find an initial collision-free topological path through the hoops and obstacles - useful as a rough guide, not as a flyable trajectory.",
-                        "Stage 2: reformulated that raw path as a Direct Transcription trajectory optimization problem, discretizing it into states and solving with the SLSQP algorithm via SciPy to enforce real dynamic feasibility.",
-                        "Enforced a terminal velocity model, start/end boundary conditions, and continued obstacle avoidance while minimizing control jerk (rate of change of acceleration) and total energy usage.",
-                        "Result: a trajectory 68.6% shorter than the raw RRT output while staying strictly within actuator limits - shorter and actually flyable at competitive racing speed."
-                    ],
-                    stack: ["PYTHON", "SCIPY", "RRT", "OPTIMIZATION"], image: ASSETS.projects.droneRacing
-                },
-                {
-                    id: 2, category: "project", title: "GPS & IMU Sensor Fusion for Automotive Dead Reckoning",
-                    tags: ["ROS 2", "EKF", "SLAM", "Python", "NUANCE"],
-                    desc: "Built custom ROS 2 drivers and an Extended Kalman Filter for NUANCE, Northeastern's autonomous car, to keep localization accurate through GPS-denied stretches of city driving.",
-                    details: [
-                        "GPS quality degrades or disappears in urban canyons and dense tree cover; dead reckoning bridges those gaps by integrating motion forward from the last good fix, but raw IMU integration drifts as small sensor errors accumulate.",
-                        "Built and deployed custom Python-based ROS 2 drivers for real-time GPS and IMU acquisition on NUANCE, Northeastern's autonomous car, for outdoor city-driving localization and navigation.",
-                        "Ran Allan Variance analysis on the IMU to separate distinct noise sources (angle random walk vs. bias instability) across time scales, then calibrated the magnetometer by correcting hard-iron distortion (constant field offset from magnetized vehicle material) and soft-iron distortion (field-shape distortion from nearby magnetic material).",
-                        "Compensated for accelerometer bias to derive accurate forward velocity, then fused gyroscope and corrected-magnetometer yaw for a reliable heading estimate.",
-                        "Implemented an Extended Kalman Filter (EKF) to fuse GPS and IMU streams, maintaining accurate trajectory estimation through GPS-denied stretches and correcting accumulated drift whenever GPS became available again."
-                    ],
-                    stack: ["ROS 2", "PYTHON", "EKF", "SLAM"], image: ASSETS.projects.gpsImuFusion
-                },
-                {
-                    id: 3, category: "project", title: "Autonomous Solar Cleaning Bot",
-                    tags: ["OpenCV", "3D Design", "Robotics", "Energy Yield"],
-                    desc: "Designed an autonomous dry/wet cleaning robot for grid-scale solar farms, replacing labor-intensive manual cleaning and lifting panel energy yield by more than 20%.",
-                    details: [
-                        "Solar panels in large grid-type farms lose efficiency over time to dust, debris, and residue buildup; manual cleaning doesn't scale across large farm footprints, so the project targeted a fully autonomous robot for both dry and wet cleaning cycles.",
-                        "Designed the complete 3D model and system architecture for the robot, enhancing energy yield by more than 20% in large-scale farm deployment.",
-                        "Led development of the cleaning algorithms using OpenCV for edge detection, enabling precise autonomous navigation across panel surfaces, including inclined arrays.",
-                        "Developed the closed-loop motor control algorithms and electrical wiring architecture, plus the communication protocols the robot uses for coordination.",
-                        "Managed the full lifecycle from BOM selection through final mechatronic assembly, overseeing manufacturing of the core mobility components and enabling autonomous operation with real-time monitoring."
-                    ],
-                    stack: ["OPENCV", "3D DESIGN", "MOBILITY", "CONTROL"], image: ASSETS.projects.solarCleaningBot
-                },
-                {
-                    id: 4, category: "project", title: "Piezoelectric Load-Decoupler",
-                    tags: ["Mechatronics", "Control Systems", "Award Winner"],
-                    desc: "Engineered a piezoelectric-based mechatronic device that autonomously disengages large pipe couplings before a 50,000 N overload can cause structural failure - earning VIT's Meritorious Award.",
-                    details: [
-                        "Large industrial pipe couplings can fracture or separate under excess axial load; traditional protection relies on manual inspection/shutdown or single-use mechanical overload devices (springs, shear pins) that are either too slow to react or non-adjustable.",
-                        "Engineered a piezoelectric-based mechatronic device that autonomously disengages the coupling when axial load exceeds 50,000 N, preventing mechanical failure before it happens.",
-                        "Leveraged the piezoelectric effect - certain crystalline materials generate a measurable electrical charge proportional to mechanical stress - to continuously sense real-time load through the coupling.",
-                        "When the sensed load crosses the 50,000 N threshold, the system executes an automatic control action to disengage the coupling, converting a passive structural safety margin into an active, continuously-monitored one.",
-                        "Reported outcome: a 100% improvement in safety and reliability versus the coupling's prior unprotected state."
-                    ],
-                    stack: ["PIEZOELECTRIC", "MECHATRONICS", "NPD"], image: ASSETS.projects.piezoelectricDecoupler
-                },
-                {
-                    id: 5, category: "project", title: "Electronic Propulsion Systems for Micro UAVs",
-                    tags: ["Aerodynamics", "UAV", "Electronic Propulsion", "Payload Drop"],
-                    desc: "Designed the complete propulsion and electronics system for micro-class fixed-wing aircraft across multiple wingspans, including an autonomous payload-drop mechanism - helping the aircraft place 3rd at AEROMANIA.",
-                    details: [
-                        "Micro-class fixed-wing aircraft have very little design margin - every gram of weight and milliamp of current draw affects flight performance, so propulsion and electronics had to be simultaneously lightweight, electrically safe, and capable of autonomous payload drop.",
-                        "Designed and implemented the complete electronic propulsion system across multiple wingspan configurations, matching propulsion choice to each airframe's lift/drag characteristics (aerodynamics) and selecting/integrating motors and ESCs (electronic propulsion).",
-                        "Verified mounting points and structural attachment for propulsion hardware against in-flight loads (stress theory), and prevented shorts and thermal issues within a tightly packed, weight-constrained electronics bay (electrical safety).",
-                        "Built reliable command and telemetry links to the aircraft (signaling systems), and designed an autonomous payload drop mechanism with a mechanical release system and real-time triggering logic rather than manual/RC-triggered release.",
-                        "This propulsion and electronics work directly supported the aircraft placing 3rd at AEROMANIA, ASME E-fest."
-                    ],
-                    stack: ["AERODYNAMICS", "PROPULSION", "ELECTRICAL SAFETY", "SIGNALLING"], image: ASSETS.projects.uavPropulsion
-                },
-                {
-                    id: 6, category: "project", title: "MediBuddy: pH-Sensitive Wound Care System",
-                    tags: ["Healthtech", "Sensor Tech", "Energy Harvesting", "Medical Device"],
-                    desc: "Designed a battery-free wound care sensor combining pH-sensitive sensing, ambient energy harvesting, and wireless transmission for continuous, clinician-free wound monitoring.",
-                    details: [
-                        "Traditional wound monitoring requires manual, periodic physical inspection to catch infection, improper healing, or pH imbalance; a continuous embedded sensor can catch these issues earlier with far less clinical overhead.",
-                        "Built a wound care system around pH-sensitive sensor technology for continuous, real-time wound condition monitoring.",
-                        "Integrated ambient energy harvesting technology to eliminate the need for a battery entirely - a key requirement for a device worn long-term against a healing wound.",
-                        "Incorporated a microcontroller unit (MCU) for real-time on-device data processing, enabling fast decision-making on wound condition, with wireless transmission of readings to a smartphone or similar device.",
-                        "Design was driven by user-centric principles throughout, aimed at real-world adoption and improved patient outcomes."
-                    ],
-                    stack: ["HEALTH TECH", "SENSOR ELECTRONICS", "MCU", "WIRELESS DATA"], image: ASSETS.projects.mediBuddy 
-                },
-                {
-                    id: 7, category: "project", title: "High Altitude Solar Balloon - HALO",
-                    tags: ["Green Energy", "NPD", "Engineering Design", "Problem Solving"],
-                    desc: "Conceptualized a balloon-deployed solar platform that operates above most atmospheric attenuation and weather, targeting ~20 hours of direct sunlight a day versus 5–6 for a typical ground panel.",
-                    details: [
-                        "Ground-based and even standard elevated solar installations are limited by atmospheric attenuation, weather, day length, and terrestrial shading - a platform operating in the troposphere sits above most of that, receiving direct, unobstructed sunlight for far more of the day.",
-                        "Conceptualized a modified solar panel platform for tropospheric deployment via balloon, engineered around a larger effective absorption surface area and extended daily operational exposure.",
-                        "Target: roughly 20 hours of direct sunlight exposure per day, compared to about 5–6 hours for a typical ground-mounted panel depending on location and season.",
-                        "Near-continuous direct sunlight combined with reduced atmospheric attenuation from altitude was the core mechanism behind the targeted efficiency and output gains."
-                    ],
-                    stack: ["SOLAR ENERGY", "NPD", "ENGINEERING DESIGN", "TROPOSPHERE"], image: ASSETS.projects.halo
-                },
-                {
-    id: 8, category: "project", title: "Image-RW: Handheld Multi-Spectral NDT Inspection Enclosure",
-    tags: ["NDT Inspection", "5-Axis CNC", "Thermal Imaging", "VR Streaming"],
-    desc: "Engineered a sub-1.5\" wide, IP67-rated dual-camera enclosure for a pole-mounted inspection tool, later cutting form factor by 30% and weight by 40% while holding 0.1mm tolerances.",
-    details: [
-        "A pole-mounted inspection tool pairs an optical and thermal camera to let an operator inspect structurally inaccessible spaces - pipe interiors, wall cavities, crawlspaces - with both feeds streamed live to a VR headset. The enclosure had to stay under 1.5in wide, hit an IP67 seal rating, and be easy to assemble in the field.",
-        "Split the enclosure into a modular assembly (Enclosure Box, Top Cover, 3D-printed Camera Bracket, machined Heat Sink, Cable Holders) mating along a custom 3D-printed gasket to hit IP67 despite the multi-part construction, with every curved feature designed at a 5mm radius and every hole standardized to M4 to minimize CNC tool changes.",
-        "Thread-milled the PG13.5 cable gland directly into the enclosure wall on a Langmuir ThreadMill rather than using a backing nut, calculating the thread pitch and pitch-diameter offset from the gland spec to remove an assembly step and an internal clearance requirement.",
-        "Machined all metal components (Al 6061, held to 0.1mm tolerance) on a Haas 5-axis in a single setup using a custom dovetail fixture, since splitting the operation across setups would have introduced repositioning error exactly where the tolerances couldn't absorb it.",
-        "Later revisited the design to cut the enclosure's form factor by roughly 30% and weight by roughly 40%, and built a custom thermal-optical calibration target that computes both cameras' intrinsic and extrinsic parameters in a single pass for low-latency VR streaming."
-    ],
-    stack: ["AL 6061", "5-AXIS CNC", "IP67 SEALING", "THERMAL/OPTICAL"],
-    image: ASSETS.projects.imageRW,
-    gallery: ASSETS.gallery.imageRW,
-    videos: ASSETS.videos.imageRW
-},
-                {
     id: 9, category: "project", title: "Nexterity - Moon Wrench (Autonomous Pipeline Flange Bolting System)",
     tags: ["Robotics", "FEA", "CNC Machining", "Structural Design"],
     desc: "Designed the clamping and socket subsystem that lets a robot absorb 380 Nm of instantaneous reaction torque across 8 bolts without spinning off the pipe - validated to a 10,000-cycle fatigue life.",
@@ -658,6 +552,19 @@
     image: ASSETS.projects.nexterity,
     gallery: ASSETS.gallery.nexterity
 },
+                {
+                    id: 2, category: "project", title: "GPS & IMU Sensor Fusion for Automotive Dead Reckoning",
+                    tags: ["ROS 2", "EKF", "SLAM", "Python", "NUANCE"],
+                    desc: "Built custom ROS 2 drivers and an Extended Kalman Filter for NUANCE, Northeastern's autonomous car, to keep localization accurate through GPS-denied stretches of city driving.",
+                    details: [
+                        "GPS quality degrades or disappears in urban canyons and dense tree cover; dead reckoning bridges those gaps by integrating motion forward from the last good fix, but raw IMU integration drifts as small sensor errors accumulate.",
+                        "Built and deployed custom Python-based ROS 2 drivers for real-time GPS and IMU acquisition on NUANCE, Northeastern's autonomous car, for outdoor city-driving localization and navigation.",
+                        "Ran Allan Variance analysis on the IMU to separate distinct noise sources (angle random walk vs. bias instability) across time scales, then calibrated the magnetometer by correcting hard-iron distortion (constant field offset from magnetized vehicle material) and soft-iron distortion (field-shape distortion from nearby magnetic material).",
+                        "Compensated for accelerometer bias to derive accurate forward velocity, then fused gyroscope and corrected-magnetometer yaw for a reliable heading estimate.",
+                        "Implemented an Extended Kalman Filter (EKF) to fuse GPS and IMU streams, maintaining accurate trajectory estimation through GPS-denied stretches and correcting accumulated drift whenever GPS became available again."
+                    ],
+                    stack: ["ROS 2", "PYTHON", "EKF", "SLAM"], image: ASSETS.projects.gpsImuFusion
+                },
                 {
                     id: 10, category: "project", title: "Surface Profilometer",
                     tags: ["Optical Metrology", "Sensor Fusion", "Real-Time Algorithms"],
@@ -683,6 +590,74 @@
                         "Implemented the model as a hardware-agnostic Python module (static tare-setting + per-frame processing), and separately specified the full hardware integration for the VectorNav VN-200T IMU - wiring pinout, RS-422 serial configuration, 50Hz output rate with dynamic vibration rejection, thermal warm-up procedure, and a $VNYPR sentence parser across all 8 sensors."
                     ],
                     stack: ["IMU / AHRS", "PYTHON", "RS-422", "STRUCTURAL MONITORING"], image: ASSETS.projects.bridgeMonitoring
+                },
+                {
+    id: 8, category: "project", title: "Image-RW: Handheld Multi-Spectral NDT Inspection Enclosure",
+    tags: ["NDT Inspection", "5-Axis CNC", "Thermal Imaging", "VR Streaming"],
+    desc: "Engineered a sub-1.5\" wide, IP67-rated dual-camera enclosure for a pole-mounted inspection tool, later cutting form factor by 30% and weight by 40% while holding 0.1mm tolerances.",
+    details: [
+        "A pole-mounted inspection tool pairs an optical and thermal camera to let an operator inspect structurally inaccessible spaces - pipe interiors, wall cavities, crawlspaces - with both feeds streamed live to a VR headset. The enclosure had to stay under 1.5in wide, hit an IP67 seal rating, and be easy to assemble in the field.",
+        "Split the enclosure into a modular assembly (Enclosure Box, Top Cover, 3D-printed Camera Bracket, machined Heat Sink, Cable Holders) mating along a custom 3D-printed gasket to hit IP67 despite the multi-part construction, with every curved feature designed at a 5mm radius and every hole standardized to M4 to minimize CNC tool changes.",
+        "Thread-milled the PG13.5 cable gland directly into the enclosure wall on a Langmuir ThreadMill rather than using a backing nut, calculating the thread pitch and pitch-diameter offset from the gland spec to remove an assembly step and an internal clearance requirement.",
+        "Machined all metal components (Al 6061, held to 0.1mm tolerance) on a Haas 5-axis in a single setup using a custom dovetail fixture, since splitting the operation across setups would have introduced repositioning error exactly where the tolerances couldn't absorb it.",
+        "Later revisited the design to cut the enclosure's form factor by roughly 30% and weight by roughly 40%, and built a custom thermal-optical calibration target that computes both cameras' intrinsic and extrinsic parameters in a single pass for low-latency VR streaming."
+    ],
+    stack: ["AL 6061", "5-AXIS CNC", "IP67 SEALING", "THERMAL/OPTICAL"],
+    image: ASSETS.projects.imageRW,
+    gallery: ASSETS.gallery.imageRW,
+    videos: ASSETS.videos.imageRW
+},
+                {
+                    id: 1, category: "project", title: "Autonomous Drone Racing",
+                    tags: ["Trajectory Opt.", "Path Planning", "SciPy", "Python"],
+                    desc: "Built a two-stage motion planner that turns a jagged, unflyable RRT path through aerial hoops into a smooth, actuator-feasible racing trajectory - cutting path length by 68.6%.",
+                    details: [
+                        "Raw RRT (Rapidly-exploring Random Tree) planning finds a collision-free route through 3D space, but its randomly sampled tree produces jagged, disconnected segments that a drone can't physically follow at racing speed without exceeding motor and control-surface limits.",
+                        "Stage 1: ran a 3D RRT search to find an initial collision-free topological path through the hoops and obstacles - useful as a rough guide, not as a flyable trajectory.",
+                        "Stage 2: reformulated that raw path as a Direct Transcription trajectory optimization problem, discretizing it into states and solving with the SLSQP algorithm via SciPy to enforce real dynamic feasibility.",
+                        "Enforced a terminal velocity model, start/end boundary conditions, and continued obstacle avoidance while minimizing control jerk (rate of change of acceleration) and total energy usage.",
+                        "Result: a trajectory 68.6% shorter than the raw RRT output while staying strictly within actuator limits - shorter and actually flyable at competitive racing speed."
+                    ],
+                    stack: ["PYTHON", "SCIPY", "RRT", "OPTIMIZATION"], image: ASSETS.projects.droneRacing
+                },
+                {
+                    id: 4, category: "project", title: "Piezoelectric Load-Decoupler",
+                    tags: ["Mechatronics", "Control Systems", "Award Winner"],
+                    desc: "Engineered a piezoelectric-based mechatronic device that autonomously disengages large pipe couplings before a 50,000 N overload can cause structural failure - earning VIT's Meritorious Award.",
+                    details: [
+                        "Large industrial pipe couplings can fracture or separate under excess axial load; traditional protection relies on manual inspection/shutdown or single-use mechanical overload devices (springs, shear pins) that are either too slow to react or non-adjustable.",
+                        "Engineered a piezoelectric-based mechatronic device that autonomously disengages the coupling when axial load exceeds 50,000 N, preventing mechanical failure before it happens.",
+                        "Leveraged the piezoelectric effect - certain crystalline materials generate a measurable electrical charge proportional to mechanical stress - to continuously sense real-time load through the coupling.",
+                        "When the sensed load crosses the 50,000 N threshold, the system executes an automatic control action to disengage the coupling, converting a passive structural safety margin into an active, continuously-monitored one.",
+                        "Reported outcome: a 100% improvement in safety and reliability versus the coupling's prior unprotected state."
+                    ],
+                    stack: ["PIEZOELECTRIC", "MECHATRONICS", "NPD"], image: ASSETS.projects.piezoelectricDecoupler
+                },
+                {
+                    id: 3, category: "project", title: "Autonomous Solar Cleaning Bot",
+                    tags: ["OpenCV", "3D Design", "Robotics", "Energy Yield"],
+                    desc: "Designed an autonomous dry/wet cleaning robot for grid-scale solar farms, replacing labor-intensive manual cleaning and lifting panel energy yield by more than 20%.",
+                    details: [
+                        "Solar panels in large grid-type farms lose efficiency over time to dust, debris, and residue buildup; manual cleaning doesn't scale across large farm footprints, so the project targeted a fully autonomous robot for both dry and wet cleaning cycles.",
+                        "Designed the complete 3D model and system architecture for the robot, enhancing energy yield by more than 20% in large-scale farm deployment.",
+                        "Led development of the cleaning algorithms using OpenCV for edge detection, enabling precise autonomous navigation across panel surfaces, including inclined arrays.",
+                        "Developed the closed-loop motor control algorithms and electrical wiring architecture, plus the communication protocols the robot uses for coordination.",
+                        "Managed the full lifecycle from BOM selection through final mechatronic assembly, overseeing manufacturing of the core mobility components and enabling autonomous operation with real-time monitoring."
+                    ],
+                    stack: ["OPENCV", "3D DESIGN", "MOBILITY", "CONTROL"], image: ASSETS.projects.solarCleaningBot
+                },
+                {
+                    id: 5, category: "project", title: "Electronic Propulsion Systems for Micro UAVs",
+                    tags: ["Aerodynamics", "UAV", "Electronic Propulsion", "Payload Drop"],
+                    desc: "Designed the complete propulsion and electronics system for micro-class fixed-wing aircraft across multiple wingspans, including an autonomous payload-drop mechanism - helping the aircraft place 3rd at AEROMANIA.",
+                    details: [
+                        "Micro-class fixed-wing aircraft have very little design margin - every gram of weight and milliamp of current draw affects flight performance, so propulsion and electronics had to be simultaneously lightweight, electrically safe, and capable of autonomous payload drop.",
+                        "Designed and implemented the complete electronic propulsion system across multiple wingspan configurations, matching propulsion choice to each airframe's lift/drag characteristics (aerodynamics) and selecting/integrating motors and ESCs (electronic propulsion).",
+                        "Verified mounting points and structural attachment for propulsion hardware against in-flight loads (stress theory), and prevented shorts and thermal issues within a tightly packed, weight-constrained electronics bay (electrical safety).",
+                        "Built reliable command and telemetry links to the aircraft (signaling systems), and designed an autonomous payload drop mechanism with a mechanical release system and real-time triggering logic rather than manual/RC-triggered release.",
+                        "This propulsion and electronics work directly supported the aircraft placing 3rd at AEROMANIA, ASME E-fest."
+                    ],
+                    stack: ["AERODYNAMICS", "PROPULSION", "ELECTRICAL SAFETY", "SIGNALLING"], image: ASSETS.projects.uavPropulsion
                 }
             ]
         };
