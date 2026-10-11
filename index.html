@@ -146,7 +146,7 @@
             
             <div class="relative order-1 md:order-2 md:sticky md:top-24">
                 <div class="flex gap-4 mb-6">
-                    <a href="https://github.com/your-github-username" target="_blank" class="p-2 text-slate-500 hover:text-slate-900 transition-colors"><i data-lucide="github"></i></a>
+                    <a href="https://github.com/xevoltz02" target="_blank" class="p-2 text-slate-500 hover:text-slate-900 transition-colors"><i data-lucide="github"></i></a>
                     <a href="https://linkedin.com/in/raghavkragarwal" target="_blank" class="p-2 text-slate-500 hover:text-blue-700 transition-colors"><i data-lucide="linkedin"></i></a>
                     <a href="mailto:agarwal.rag@northeastern.edu" class="p-2 text-slate-500 hover:text-red-600 transition-colors"><i data-lucide="mail"></i></a>
                     <a href="tel:+18573399025" class="p-2 text-slate-500 hover:text-green-600 transition-colors"><i data-lucide="phone"></i></a>
@@ -269,7 +269,7 @@
                     <a href="https://linkedin.com/in/raghavkragarwal" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded transition-colors text-sm">
                         LinkedIn Profile
                     </a>
-                    <a href="https://github.com/your-github-username" class="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded transition-colors text-sm">
+                    <a href="https://github.com/xevoltz02" class="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded transition-colors text-sm">
                         GitHub
                     </a>
                 </div>
@@ -303,7 +303,7 @@
     </section>
 
     <footer class="py-12 bg-white border-t border-slate-200 text-center">
-        <p class="font-mono text-xs text-slate-500 tracking-widest">RAGHAV KUMAR AGARWAL © 2025</p>
+        <p class="font-mono text-xs text-slate-500 tracking-widest">RAGHAV KUMAR AGARWAL © 2026</p>
     </footer>
 
     <div id="project-modal" class="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-slate-900/90 backdrop-blur-sm hidden">
@@ -368,7 +368,7 @@
         nexterity: [
             { src: "public/assets/MoonWrench.jpeg", caption: "8-socket clamping ring with impact sockets" },
             { src: "public/assets/moonWrench_load bearing_socket Adapter.jpeg", caption: "Al 7075 load-bearing socket adapter (live-tooling lathe)" },
-            { src: "public/assets/moonWrench_mounted.jpeg", caption: "Moon Wrench mounted on a pipe flange" }
+            { src: "public/assets/moonWrench_mounted.jpeg", caption: "MoonWrench mounted on a pipe flange" }
         ]
     },
 
@@ -381,19 +381,18 @@
 
         const DATA = {
             skills: [
-                { cat: "MECHANICAL DESIGN & SIMULATION", items: "Autodesk Fusion 360, SolidWorks (Certified: CSWA – Design Associate, Additive Manufacturing Associate), Finite Element Analysis (FEA – Static Stress, Deflection, Fatigue Life, Bending), Thermal and Electronics cooling Simulation, Geometric Dimensioning & Tolerancing (GD&T), Enclosure Design, Fixed/Variable UAV Airframe " },
-                { cat: "MANUFACTURING & FABRICATION", items: "Haas 5-Axis CNC Milling, CNC Lathe with Live Tooling, Computer-Aided Manufacturing (CAM), Precision Fixturing, Rapid Prototyping (FDM / Additive Manufacturing), High-Strength Alloys" },
-                { cat: "LANGUAGES & COMPUTATION", items: "Python, C++, MATLAB" },
-                { cat: "AUTONOMY, PLANNING & CONTROL", items: "ROS / ROS 2, Extended Kalman Filtering (EKF), SLAM (R-Tab, VIO, ORBSLAM2/3, LIO-SAM), State Estimation, Trajectory Optimization , Motion Planning (RRT, MMPI, MPC), OpenCV, Closed-Loop Motor Control" },
-                { cat: "SENSORS, OPTICS & METROLOGY", items: "Sensor Fusion (GPS/GNSS , SONAR, IMU, Camera (Thermal, Opyical, Depth), Pressure, Encoders), Non-Destructive Testing (NDT)" },
-                
-                
+                { cat: "MECHANICAL DESIGN & SIMULATION", items: "Autodesk Fusion 360, SolidWorks (Certified: CSWA – Design Associate, Additive Manufacturing Associate), Finite Element Analysis (FEA – Static Stress, Deflection, Fatigue Life, Bending), Thermal & Electronics Cooling Simulation, Geometric Dimensioning & Tolerancing (GD&T), DFM / DFA, End-Effector Design, Kinematic Mechanisms, Enclosure Design, Fixed/Variable UAV Airframe" },
+                { cat: "MANUFACTURING & FABRICATION", items: "Haas 5-Axis CNC Milling, CNC Lathe with Live Tooling, Multi-Axis CAM Programming, Precision Fixturing, Rapid Prototyping (FDM / Additive Manufacturing), High-Strength Alloys" },
+                { cat: "LANGUAGES & COMPUTATION", items: "Python (PyTorch, NumPy, rclpy, CuRobo, OpenCV), C++, MATLAB" },
+                { cat: "AUTONOMY, PLANNING & CONTROL", items: "ROS / ROS 2, Nav2, Gazebo, Extended Kalman Filtering (EKF), SLAM (R-Tab, VIO, ORBSLAM2/3, LIO-SAM), State Estimation, PCL, Trajectory Optimization (MPC, MPPI, RRT), PID Control, Closed-Loop Motor Control (FOC / PWM)" },
+                { cat: "MANIPULATION", items: "MoveIt 2, Manipulator Kinematics & Dynamics (FK/IK, Singularity Avoidance), Industrial Arms (Fanuc, Duco)" },
+                { cat: "SENSORS, OPTICS & METROLOGY", items: "Sensor Fusion (LiDAR, GPS/GNSS, IMU, Camera (Thermal, Optical, Depth), Sonar, DVL, ToF, Pressure, Encoders), Non-Destructive Testing (NDT)" }
             ],
             experience: [
                 {
-                    id: 100, category: "experience", company: "aRoboticsCompany",
+                    id: 100, category: "experience", company: "aRobotics Company",
                     companyUrl: "https://arcinc.com/",
-                    role: "Mechanical Engineer",
+                    role: "Robotics Mechanical Engineer",
                     period: "June 2026 - Sept 2026", location: "Ossining, NY",
                     desc: "Owned mechanical design, precision manufacturing, and embedded sensing across multiple R&D robotics platforms - from high-torque structural systems to real-time optical and inertial metrology.",
                     stack: ["FEA / STRUCTURAL", "CNC / DFM", "GAS SYSTEMS", "ROBOTIC PERCEPTION", "SENSOR FUSION"],
@@ -401,8 +400,8 @@
                         {
                             title: "Mechanical Engineering Focus",
                             bullets: [
-                                { keyword: "Structural Analysis & FEA", text: "Designed high-load reaction mechanisms and structural adapters to absorb 380 Nm instantaneous impact loads during autonomous bolt disassembly; iterated static FEA in Fusion 360 to mitigate stress concentrations, reducing peak stress to 265 MPa, achieving a 1.89 safety factor on Al 7075, and validating for 10,000-cycle fatigue life." },
-                                { keyword: "Precision CNC Machining & DFM/DFA", text: "Applied rigorous DFM principles by matching internal feature radii to 3/8\" tooling and standardizing fasteners, manufacturing components on Haas 5-axis mills and live-tooling lathes using single-setup dovetail fixturing; engineered an IP67-rated modular aluminum enclosure with thermal-paste heat sinking, reducing overall mass by 40% and package volume by 30%." },
+                                { keyword: "Structural Analysis & FEA", text: "Designed MoonWrench, a hands-free pipe wrench whose high-load reaction mechanisms and structural adapters absorb 380 Nm instantaneous impact loads during autonomous bolt disassembly; iterated static FEA in Fusion 360 to mitigate stress concentrations, reducing peak stress to 265 MPa, achieving a 1.89 safety factor on Al 7075, and validating for 10,000-cycle fatigue life." },
+                                { keyword: "Precision CNC Machining & DFM/DFA", text: "Applied rigorous DFM principles by matching internal feature radii to 3/8\" tooling and standardizing fasteners, manufacturing components on a Haas 5-axis mill (VF-4SS) and live-tooling lathes using single-setup dovetail fixturing; engineered an IP67-rated modular aluminum enclosure for the Image-RW handheld NDT tool with thermal-paste heat sinking, reducing overall mass by 40% and package volume by 30%." },
                                 { keyword: "Fluids, Thermal & Pneumatic Systems", text: "Architected an integrated gas-conditioning and separation infrastructure utilizing a 5HP/175 PSI compressor, refrigerated dryers, and membrane separation to supply 99.95%-pure nitrogen; engineered a custom delivery nozzle maintaining a laminar shielding envelope (80 psi, 1 SCFM at 2ft standoff) to eliminate oxidation during robotic laser processing." }
                             ]
                         },
@@ -410,7 +409,7 @@
                             title: "Software & Embedded Systems Focus",
                             bullets: [
                                 { keyword: "Robotic Perception & Kinematic Control", text: "Integrated tactile surface perception (±1mm accuracy) onto a 6-DOF Fanuc CRX-10iA manipulator, calculating real-time workpiece offsets to actively avoid collisions and prevent Jacobian rank loss (kinematic singularities) during complex non-linear contour tracking." },
-                                { keyword: "Computer Vision & Sensor Fusion Algorithms", text: "Formulated a first-principles triangulation model combining a line laser, ToF depth sensor, and global-shutter camera; developed real-time 2D coordinate leveling to eliminate operator wrist tilt, implementing a linearized pinhole projection algorithm that delivers sub-millimeter surface profilometry invariant to standoff distance drift." },
+                                { keyword: "Computer Vision & Sensor Fusion Algorithms", text: "Formulated a first-principles triangulation model combining a line laser, ToF depth sensor, and global-shutter camera; developed real-time 2D coordinate leveling to eliminate operator wrist tilt, implementing a linearized pinhole projection algorithm that delivers sub-centimeter surface profilometry invariant to standoff distance drift." },
                                 { keyword: "Embedded Interfacing & Kinematic State Estimation", text: "Authored an object-oriented Python kinematics engine processing 50Hz serial data streams ($VNYPR via RS-422) from an 8-IMU AHRS array; implemented automated tare-offset calibrations and parabolic double numerical integration to isolate dynamic bridge deck torsion, vertical sag, and hinge-pin discontinuity angles in real time." }
                             ]
                         }
@@ -421,14 +420,15 @@
                     role: "Research & Development Intern",
                     period: "Jan 2024 - July 2024", location: "India",
                     logo: ASSETS.logos.tataPowerSolar,
-                    desc: "Redesigned field enclosure thermal architecture and led QC/compliance for i-TAPS, Tata Power Solar's SIM-based, cloud-enabled data logger hardware powering their national NOC remote monitoring platform.",
-                    stack: ["i-TAPS / 4G DATA ACQ.", "THERMAL SIM.", "ISO/IEC STDS", "QC"],
+                    desc: "Redesigned field enclosure thermal architecture, integrated UPS backup, and led QC/compliance for i-TAPS, Tata Power Solar's SIM-based, cloud-enabled 4G data logger hardware powering their national NOC remote monitoring platform.",
+                    stack: ["i-TAPS / 4G DATA ACQ.", "THERMAL SIM.", "UPS / POWER", "ISO/IEC STDS", "QC"],
                     cards: [
                         {
                             title: "Thermal & Systems Engineering",
                             bullets: [
-                                { keyword: "Enclosure Thermal Redesign", text: "Identified a heat-dissipation bottleneck in the field enclosure of i-TAPS, Tata Power Solar's SIM-based data logger unit, and used thermal simulation and circuit analysis to redesign its geometry and internal layout, improving heat dissipation by 25% in a sealed, non-actively-cooled outdoor unit." },
-                                { keyword: "System Architecture & Interface Specs", text: "Developed system architecture drawings and interface specifications between the 4G data logger and panel/inverter sensors, precise enough for field technicians to install and service consistently across many sites." },
+                                { keyword: "Enclosure Thermal Redesign", text: "Identified a heat-dissipation bottleneck in the field enclosure of i-TAPS, Tata Power Solar's SIM-based data logger unit, and used electronics cooling simulation and circuit analysis to redesign its geometry and internal layout, improving heat dissipation by 25% in a sealed, non-actively-cooled outdoor unit." },
+                                { keyword: "UPS Integration", text: "Integrated an uninterruptible power supply (UPS) into the data logger system so units keep logging and transmitting through utility outages, improving fault tolerance at remote, unattended sites." },
+                                { keyword: "System Architecture & Interface Specs", text: "Developed system architecture drawings and sensor interface specifications between the 4G data logger and panel/inverter sensors, precise enough for field technicians to install and service consistently across many sites." },
                                 { keyword: "PCBA & BOM Auditing", text: "Managed PCBA-level design considerations feeding into the thermal redesign, and audited Bills of Materials to ensure component specifications matched what was actually deployed in production." }
                             ]
                         },
@@ -462,8 +462,8 @@
                     id: 103, category: "experience", company: "ASME Projects Team, VIT India",
                     role: "Mechatronics Head",
                     period: "Aug 2021 - July 2023", location: "India",
-                    desc: "Led propulsion system design for a 15-person team across competition drones, micro-class fixed-wing aircraft, and a from-scratch soil-sampling robotic arm.",
-                    stack: ["UAV", "MECHATRONICS", "PROPULSION SYS."],
+                    desc: "Led a 15-person team developing autonomous systems - competition drones, micro-class fixed-wing aircraft, and a from-scratch soil-sampling robotic arm - owning propulsion, power distribution, and wiring integration.",
+                    stack: ["UAV", "MECHATRONICS", "PROPULSION SYS.", "WIRING / POWER"],
                     cards: [
                         {
                             title: "Autonomous Drone Path Planning",
@@ -474,7 +474,8 @@
                         {
                             title: "Micro-Class Fixed-Wing Propulsion",
                             bullets: [
-                                { keyword: "Thrust-to-Weight Optimization", text: "Defined propulsion components (motors, propellers, battery selection) against thrust-to-weight requirements specific to each airframe, while minimizing onboard electronics weight to preserve the aircraft's usable thrust-to-weight margin." }
+                                { keyword: "Thrust-to-Weight Optimization", text: "Defined propulsion components (motors, propellers, battery selection) against thrust-to-weight requirements specific to each airframe, while minimizing onboard electronics weight to preserve the aircraft's usable thrust-to-weight margin." },
+                                { keyword: "Power & Signal Integration", text: "Defined sensor interface specifications and power distribution layouts, and drew the wiring schematics integrating the electronic propulsion system with motor controllers for reliable power delivery and signal routing." }
                             ]
                         },
                         {
@@ -489,24 +490,25 @@
             education: [
                 {
                     school: "Northeastern University",
-                    degree: "M.S. in Robotics and Automation Engineering",
-                    period: "Sep 2024 - Present",
+                    degree: "M.S. in Robotics (Mechanical Engineering)",
+                    period: "Sep 2024 - Dec 2026 (Expected)",
                     location: "Boston, MA",
                     courses: [
-                        "Robotics Sensing & Navigation", "Robot Mechanics and Control", "Mobile Robotics",
+                        "Robot Design", "Robotics Sensing & Navigation", "Robot Mechanics and Control", "Mobile Robotics",
                         "Control Systems Engineering", "Robotic Science and Systems", "Legged Robots"
                     ]
                 },
                 {
                     school: "Vellore Institute of Technology",
                     degree: "B.Tech. in Mechanical Engineering",
-                    period: "Sep 2020 - July 2024",
-                    location: "India",
+                    period: "Sep 2020 - June 2024",
+                    location: "Vellore, India",
                     courses: [
                         "Automotive Electronics", "Statistics", "Mechatronics System Design", "Rapid Manufacturing",
                         "New Product Development", "Kinematics & Dynamics", "Fluid Mechanics", "Finite Element Analysis (FEA)",
                         "Microprocessors", "CAD/CAM"
-                    ]
+                    ],
+                    description: "Certifications: SolidWorks Mechanical Design (CSWA), Additive Manufacturing (CSWA-AM), Entrepreneurship (IIT Roorkee), Principles of Management (IIT Kanpur)."
                 }
             ],
             awards: [
@@ -538,7 +540,7 @@
             ],
             projects: [
                 {
-    id: 9, category: "project", title: "Nexterity - Moon Wrench (Autonomous Pipeline Flange Bolting System)",
+    id: 9, category: "project", title: "Nexterity - MoonWrench (Autonomous Pipeline Flange Bolting System)",
     tags: ["Robotics", "FEA", "CNC Machining", "Structural Design"],
     desc: "Designed the clamping and socket subsystem that lets a robot absorb 380 Nm of instantaneous reaction torque across 8 bolts without spinning off the pipe - validated to a 10,000-cycle fatigue life.",
     details: [
@@ -554,21 +556,21 @@
 },
                 {
                     id: 2, category: "project", title: "GPS & IMU Sensor Fusion for Automotive Dead Reckoning",
-                    tags: ["ROS 2", "EKF", "SLAM", "Python", "NUANCE"],
-                    desc: "Built custom ROS 2 drivers and an Extended Kalman Filter for NUANCE, Northeastern's autonomous car, to keep localization accurate through GPS-denied stretches of city driving.",
+                    tags: ["ROS 2", "EKF", "Sensor Fusion", "Python", "NUANCE"],
+                    desc: "Built custom ROS 2 drivers and an Extended Kalman Filter for NUANCE, Northeastern's autonomous car, holding 2 m positioning precision through 70 s of GPS-denied city driving and improving navigation accuracy by 25%.",
                     details: [
                         "GPS quality degrades or disappears in urban canyons and dense tree cover; dead reckoning bridges those gaps by integrating motion forward from the last good fix, but raw IMU integration drifts as small sensor errors accumulate.",
-                        "Built and deployed custom Python-based ROS 2 drivers for real-time GPS and IMU acquisition on NUANCE, Northeastern's autonomous car, for outdoor city-driving localization and navigation.",
+                        "Built and deployed custom Python-based ROS 2 drivers for real-time GPS and IMU acquisition on NUANCE, Northeastern's autonomous car, evaluated on an urban Boston driving route.",
                         "Ran Allan Variance analysis on the IMU to separate distinct noise sources (angle random walk vs. bias instability) across time scales, then calibrated the magnetometer by correcting hard-iron distortion (constant field offset from magnetized vehicle material) and soft-iron distortion (field-shape distortion from nearby magnetic material).",
-                        "Compensated for accelerometer bias to derive accurate forward velocity, then fused gyroscope and corrected-magnetometer yaw for a reliable heading estimate.",
-                        "Implemented an Extended Kalman Filter (EKF) to fuse GPS and IMU streams, maintaining accurate trajectory estimation through GPS-denied stretches and correcting accumulated drift whenever GPS became available again."
+                        "Compensated for accelerometer bias to derive accurate forward velocity, then designed a complementary filter fusing gyroscope rate and corrected-magnetometer heading for a drift-resistant yaw estimate.",
+                        "Implemented an Extended Kalman Filter (EKF) to fuse GPS and IMU streams, holding 2 m positioning precision through 70 s of GPS-denied driving, correcting accumulated drift whenever GPS returned, and improving overall navigation accuracy by 25%."
                     ],
-                    stack: ["ROS 2", "PYTHON", "EKF", "SLAM"], image: ASSETS.projects.gpsImuFusion
+                    stack: ["ROS 2", "PYTHON", "EKF", "COMPLEMENTARY FILTER"], image: ASSETS.projects.gpsImuFusion
                 },
                 {
-                    id: 10, category: "project", title: "Surface Profilometer",
+                    id: 10, category: "project", title: "Handheld Non-Contact Surface Profilometer",
                     tags: ["Optical Metrology", "Sensor Fusion", "Real-Time Algorithms"],
-                    desc: "Architected a handheld optical system combining a line laser, global-shutter camera, and Time-of-Flight sensor to measure sub-millimeter surface geometry without touching the part.",
+                    desc: "Architected a handheld optical system combining a line laser, global-shutter camera, and Time-of-Flight sensor to measure sub-centimeter surface geometry without touching the part.",
                     details: [
                         "Inspecting fine surface geometry traditionally means either physical contact (risking damage to a finished surface) or a fixed benchtop rig (unusable on an installed part). A handheld tool has to solve for a standoff distance and tilt that both drift continuously with the operator's hand.",
                         "Designed the complete system architecture and measurement model: a 45° line laser for triangulation, a Time-of-Flight sensor tracking live hand-to-surface standoff, and a monochrome global-shutter camera with a narrow bandpass filter to reject ambient shop lighting and glare.",
@@ -599,7 +601,7 @@
         "A pole-mounted inspection tool pairs an optical and thermal camera to let an operator inspect structurally inaccessible spaces - pipe interiors, wall cavities, crawlspaces - with both feeds streamed live to a VR headset. The enclosure had to stay under 1.5in wide, hit an IP67 seal rating, and be easy to assemble in the field.",
         "Split the enclosure into a modular assembly (Enclosure Box, Top Cover, 3D-printed Camera Bracket, machined Heat Sink, Cable Holders) mating along a custom 3D-printed gasket to hit IP67 despite the multi-part construction, with every curved feature designed at a 5mm radius and every hole standardized to M4 to minimize CNC tool changes.",
         "Thread-milled the PG13.5 cable gland directly into the enclosure wall on a Langmuir ThreadMill rather than using a backing nut, calculating the thread pitch and pitch-diameter offset from the gland spec to remove an assembly step and an internal clearance requirement.",
-        "Machined all metal components (Al 6061, held to 0.1mm tolerance) on a Haas 5-axis in a single setup using a custom dovetail fixture, since splitting the operation across setups would have introduced repositioning error exactly where the tolerances couldn't absorb it.",
+        "Machined all metal components (Al 6061, held to 0.1mm tolerance) on a Haas 5-axis (VF-4SS) in a single setup using a custom dovetail fixture, since splitting the operation across setups would have introduced repositioning error exactly where the tolerances couldn't absorb it.",
         "Later revisited the design to cut the enclosure's form factor by roughly 30% and weight by roughly 40%, and built a custom thermal-optical calibration target that computes both cameras' intrinsic and extrinsic parameters in a single pass for low-latency VR streaming."
     ],
     stack: ["AL 6061", "5-AXIS CNC", "IP67 SEALING", "THERMAL/OPTICAL"],
@@ -635,16 +637,16 @@
                 },
                 {
                     id: 3, category: "project", title: "Autonomous Solar Cleaning Bot",
-                    tags: ["OpenCV", "3D Design", "Robotics", "Energy Yield"],
-                    desc: "Designed an autonomous dry/wet cleaning robot for grid-scale solar farms, replacing labor-intensive manual cleaning and lifting panel energy yield by more than 20%.",
+                    tags: ["OpenCV", "FEA", "Robotics", "Energy Yield"],
+                    desc: "Designed and built an autonomous wet/dry cleaning robot for solar panels - a lightweight aluminium chassis and tracked drivetrain that holds 25° inclines, recovering more than 20% of the PV yield lost to dust.",
                     details: [
                         "Solar panels in large grid-type farms lose efficiency over time to dust, debris, and residue buildup; manual cleaning doesn't scale across large farm footprints, so the project targeted a fully autonomous robot for both dry and wet cleaning cycles.",
-                        "Designed the complete 3D model and system architecture for the robot, enhancing energy yield by more than 20% in large-scale farm deployment.",
-                        "Led development of the cleaning algorithms using OpenCV for edge detection, enabling precise autonomous navigation across panel surfaces, including inclined arrays.",
-                        "Developed the closed-loop motor control algorithms and electrical wiring architecture, plus the communication protocols the robot uses for coordination.",
-                        "Managed the full lifecycle from BOM selection through final mechatronic assembly, overseeing manufacturing of the core mobility components and enabling autonomous operation with real-time monitoring."
+                        "Designed and fabricated a lightweight aluminium chassis and high-torque tracked drivetrain, using FEA to optimize rigidity so the robot holds 25° panel inclines without slipping.",
+                        "Integrated a wet/dry cleaning payload - motorized microfiber roller brushes plus a controlled fluid spray - recovering more than 20% of the PV power yield lost to dust.",
+                        "Prevented falls at panel edges with optical/IR edge sensors and limit switches, alongside OpenCV-based edge detection for navigation across panel surfaces, including inclined arrays.",
+                        "Synchronized the dual drive motors with closed-loop PWM/PID velocity control so the robot tracks straight despite varying glass friction, and managed the full lifecycle from BOM selection through final mechatronic assembly."
                     ],
-                    stack: ["OPENCV", "3D DESIGN", "MOBILITY", "CONTROL"], image: ASSETS.projects.solarCleaningBot
+                    stack: ["OPENCV", "FEA", "TRACKED DRIVETRAIN", "PWM / PID"], image: ASSETS.projects.solarCleaningBot
                 },
                 {
                     id: 5, category: "project", title: "Electronic Propulsion Systems for Micro UAVs",
@@ -899,7 +901,7 @@
 
         ${!isExp ? `
         <div class="mt-8 pt-4 border-t border-slate-200 flex justify-end">
-            <a href="https://github.com/your-github-username" target="_blank" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold uppercase text-xs tracking-widest rounded transition-colors">
+            <a href="https://github.com/xevoltz02" target="_blank" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold uppercase text-xs tracking-widest rounded transition-colors">
                 View Code on GitHub <i data-lucide="github" class="w-4 h-4 ml-2 inline-block"></i>
             </a>
         </div>` : ''}
